@@ -3,121 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 1: Master Data Basics - Master Data Management Fundamentals</title>
+  <title>Module 1: Introduction to Module - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body data-module-id="module-1" data-page-id="module-1-intro.html">
   <div class="layout">
-    <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div class="sidebar-title">
-          <div class="sidebar-icon"></div>
-          Master Data Management
-        </div>
+        <div class="sidebar-title">Master Data Management</div>
       </div>
-      
+
       <nav>
         <ul class="sidebar-nav">
           <li class="sidebar-nav-item">
-            <a href="../index.html" class="sidebar-nav-link">Dashboard</a>
+            <a href="../index.html" class="sidebar-nav-link">
+              <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+              Dashboard
+            </a>
           </li>
+
           <li class="sidebar-nav-item">
-            <span style="display: block; padding: 12px 16px; font-size: 12px; text-transform: uppercase; color: #64748b; font-weight: 600;">Modules</span>
+            <details class="module-group">
+              <summary class="sidebar-nav-link module-toggle active">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Module 1
+              </summary>
+              <ul class="sidebar-subnav">
+                <li class="sidebar-subnav-item"><a href="module-1-intro.html" class="sidebar-subnav-link active">Introduction to Module</a></li>
+                <li class="sidebar-subnav-item"><a href="module-2-basics.html" class="sidebar-subnav-link">Master Data Basics</a></li>
+                <li class="sidebar-subnav-item"><a href="module-3-advanced.html" class="sidebar-subnav-link">Managing Master Data</a></li>
+              </ul>
+            </details>
           </li>
+
           <li class="sidebar-nav-item">
-            <a href="module-1-intro.html" class="sidebar-nav-link active">Module 1: Introduction</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="module-2-basics.html" class="sidebar-nav-link">Module 2: Basics</a>
-          </li>
-          <li class="sidebar-nav-item">
-            <a href="module-3-advanced.html" class="sidebar-nav-link">Module 3: Advanced</a>
+            <details class="module-group">
+              <summary class="sidebar-nav-link module-toggle">
+                <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                </svg>
+                Module 2
+              </summary>
+              <ul class="sidebar-subnav">
+                <li class="sidebar-subnav-item"><a href="module-01.html" class="sidebar-subnav-link">Introduction to Module</a></li>
+                <li class="sidebar-subnav-item"><a href="module-02.html" class="sidebar-subnav-link">Types of Master Data</a></li>
+              </ul>
+            </details>
           </li>
         </ul>
       </nav>
     </aside>
 
-    <!-- MAIN CONTENT -->
     <div class="main-content">
-      <!-- HEADER -->
       <header class="header">
-        <h1 class="header-title">Module 1: Master Data Basics</h1>
+        <h1 class="header-title">Module 1: Introduction to Module</h1>
         <div class="header-actions">
-          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Module 1 of 11</span>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 3</span>
         </div>
       </header>
 
-      <!-- CONTENT -->
       <div class="content">
-        <div class="lesson-container">
-          <!-- VIDEO SIDE -->
-          <div class="lesson-video">
-            <div style="position: relative; width: 100%; padding-bottom: 56.25%; margin-bottom: 0;">
-              <iframe 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px 8px 0 0;"
-                src="https://share.descript.com/embed/oqtaK8epnpp" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-              </iframe>
-            </div>
-            <div style="padding: 16px; border-top: 1px solid var(--border-color);">
-              <h3 style="margin-bottom: 8px;">Introduction</h3>
-              <p style="font-size: var(--font-size-sm);">Watch to understand the fundamentals</p>
-            </div>
+        <div class="module-content">
+          <div class="card introduction-card">
+            <h2 class="introduction-title">Introduction to Module</h2>
+            <figure class="introduction-figure">
+              <div class="introduction-video-frame">
+                <iframe
+                  class="introduction-video"
+                  src="https://share.descript.com/embed/oqtaK8epnpp"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <figcaption class="introduction-caption">Use this caption area to summarize the video in one sentence.</figcaption>
+            </figure>
           </div>
 
-          <!-- TEXT SIDE -->
-          <div class="lesson-content">
-            <!-- Overview Section -->
-            <div class="lesson-section">
-              <h2>
-                <div class="section-icon"></div>
-                Overview
-              </h2>
-              <p>
-                In this module, we'll cover the fundamentals of master data management, including its core concepts, 
-                primary use cases, and how it integrates into your data strategy.
-              </p>
-            </div>
+          <section class="course-overview">
+            <h2 class="course-overview-title course-title-with-icon">
+              <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3l8 4v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V7l8-4z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              Module support notes
+            </h2>
 
-            <!-- Key Points Section -->
-            <div class="lesson-section">
-              <h2>
-                <div class="section-icon"></div>
-                Key Points
-              </h2>
-              <ul>
-                <li>Understanding data quality frameworks</li>
-                <li>Master data management architecture overview</li>
-                <li>Core components and their functions</li>
-                <li>Integration with existing systems</li>
-              </ul>
-            </div>
+            <div class="course-overview-body">
+              <p>Paste your module text here. Keep the first paragraph short as an overview, then break remaining content into callouts and concise sections below.</p>
 
-            <!-- Resources Section -->
-            <div class="lesson-section">
-              <h2>
-                <div class="section-icon"></div>
-                Resources
-              </h2>
-              <p>Download the accompanying slides and documentation:</p>
-              <div style="margin-top: 12px;">
-                <button class="btn btn-primary">📥 Download Slides</button>
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Add context or definitions that support the video and help learners follow the page content.</p>
+              </div>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>Use this area for practical advice, examples, or shortcuts learners can apply immediately.</p>
+              </div>
+
+              <div class="course-callout course-callout-warning">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                    <line x1="12" y1="9" x2="12" y2="13"></line>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg>
+                  Warning
+                </p>
+                <p>Highlight common mistakes, quality risks, or governance pitfalls to watch out for.</p>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 
-        <!-- NAVIGATION -->
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
-          <button class="btn btn-primary" style="visibility: hidden;">← Previous</button>
-          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Lesson 1 of 3</span>
-          <a href="module-2-basics.html" class="btn btn-accent">Next →</a>
+          <a href="../index.html" class="btn btn-primary">Back</a>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 3</span>
+          <a href="module-2-basics.html" class="btn btn-accent">Next</a>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function () {
+      const moduleId = document.body.dataset.moduleId;
+      const pageId = document.body.dataset.pageId;
+      if (moduleId && pageId) {
+        localStorage.setItem("mdm_last_" + moduleId, pageId);
+      }
+
+      const moduleGroups = Array.from(document.querySelectorAll(".module-group"));
+      moduleGroups.forEach(function (group) {
+        group.addEventListener("toggle", function () {
+          if (!group.open) {
+            return;
+          }
+
+          moduleGroups.forEach(function (otherGroup) {
+            if (otherGroup !== group) {
+              otherGroup.open = false;
+            }
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
