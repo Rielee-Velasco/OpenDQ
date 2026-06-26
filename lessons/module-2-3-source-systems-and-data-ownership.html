@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 2: Source Systems and Data Ownership - Master Data Management</title>
+  <title>Source Systems and Data Ownership - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-2" data-page-id="module-2-3-source-systems-and-data-ownership.html">
   <div class="layout">
-            <aside class="sidebar">
+    <aside class="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-title">Master Data Management</div>
       </div>
@@ -44,7 +44,7 @@
             </details>
           </li>
           <li class="sidebar-nav-item">
-            <details class="module-group">
+            <details class="module-group" open>
               <summary class="sidebar-nav-link module-toggle active">
 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -244,7 +244,7 @@
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 2: Source Systems and Data Ownership</h1>
+        <h1 class="header-title">Source Systems and Data Ownership</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -253,18 +253,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Source Systems and Data Ownership</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/nrEpYTPLZdB"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Where master data originates, how systems of record work, and why ownership is what makes business information trustworthy.</figcaption>
             </figure>
           </div>
 
@@ -278,7 +277,8 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <p>Business information does not appear in one place. Customer records may originate in one application, product information in another, and employee information somewhere else entirely. As organizations grow, multiple systems begin contributing to the same business entities — and without clear rules about which system to trust, inconsistency follows.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -287,22 +287,26 @@
                     <line x1="12" y1="8" x2="12" y2="12"></line>
                     <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Note
+                  Definition
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>A system of record is the authoritative source for a specific business entity or attribute. It is the application whose version of the data is considered correct — and whose standards other systems should follow, not override.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <h3 class="course-overview-subtitle">Where master data originates</h3>
+              <p>Organizations use many systems to support daily operations. CRM platforms manage customer information. ERP platforms manage products and financial data. HR systems maintain employee records. These are called source systems because they create or maintain business information. Understanding where data originates is the first step toward managing it consistently.</p>
+
+              <div class="course-visual-block">
+                <img
+                  src="../assets/m2-source-systems.png"
+                  alt="Source systems — CRM, ERP, HR, and other platforms as the origin points for master data"
+                  class="course-visual-image"
+                />
               </div>
+
+              <h3 class="course-overview-subtitle">Ownership makes trust possible</h3>
+              <p>Technology alone does not create trusted data. Organizations assign ownership to ensure information remains accurate and well-maintained over time. Data owners establish standards, approve changes, and define quality expectations. Clear ownership answers the questions that matter most: who creates this information, who approves updates, and who is responsible when something goes wrong.</p>
+
+              <p>Creating trusted master data is rarely one team's responsibility. Business teams understand how information should be used. Technology teams manage systems and data movement. Governance teams establish policies and monitor quality. Trusted business information happens when all three work together.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -311,10 +315,11 @@
                     <line x1="12" y1="9" x2="12" y2="13"></line>
                     <line x1="12" y1="17" x2="12.01" y2="17"></line>
                   </svg>
-                  Warning
+                  No ownership means no accountability
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>When no one owns a data domain, quality degrades silently. Different teams begin making local decisions about how to store or update information, and over time those decisions diverge. AI systems trained on data without clear ownership inherit those inconsistencies — and their outputs reflect it.</p>
               </div>
+
             </div>
           </section>
         </div>

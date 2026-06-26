@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 2: Single Source of Truth Concepts - Master Data Management</title>
+  <title>Single Source of Truth Concepts - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-2" data-page-id="module-2-4-single-source-of-truth-concepts.html">
   <div class="layout">
-            <aside class="sidebar">
+    <aside class="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-title">Master Data Management</div>
       </div>
@@ -44,7 +44,7 @@
             </details>
           </li>
           <li class="sidebar-nav-item">
-            <details class="module-group">
+            <details class="module-group" open>
               <summary class="sidebar-nav-link module-toggle active">
 <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
   <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -244,7 +244,7 @@
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 2: Single Source of Truth Concepts</h1>
+        <h1 class="header-title">Single Source of Truth Concepts</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -253,18 +253,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Single Source of Truth Concepts</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/cmS4CmSb7SV"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">What a single source of truth really means, why it is harder to create than it sounds, and why it matters so much for AI.</figcaption>
             </figure>
           </div>
 
@@ -278,7 +277,8 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <p>When multiple systems store different versions of the same business information, trust erodes. Teams stop relying on reports. Decisions get made on incomplete data. And AI systems trained on that information inherit the confusion. Creating a single source of truth is how organizations address this — not by consolidating everything into one database, but by creating agreement about what is correct and ensuring that agreement holds over time.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -287,10 +287,24 @@
                     <line x1="12" y1="8" x2="12" y2="12"></line>
                     <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Note
+                  Important distinction
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>A single source of truth is not the same as a single database. It means that for any given business entity, there is one agreed-upon, governed version that all systems and teams treat as correct. The goal is consistency and trust — not necessarily centralization.</p>
               </div>
+
+              <h3 class="course-overview-subtitle">Why trust is difficult to create</h3>
+              <p>Different systems are designed for different purposes and managed by different teams. Customer information may look different in sales than it does in finance. Updates happen independently and definitions drift over time. As this complexity grows, organizations lose confidence in which version of information to trust — and that uncertainty is costly.</p>
+
+              <div class="course-visual-block">
+                <img
+                  src="../assets/m2-single-source-of-truth.png"
+                  alt="Single source of truth — one trusted business view shared across multiple systems"
+                  class="course-visual-image"
+                />
+              </div>
+
+              <h3 class="course-overview-subtitle">Governance keeps trust alive</h3>
+              <p>Trust is not created once and then maintained automatically. Organizations use governance to define who owns information, how changes are approved, and how standards are applied across systems. Without ongoing governance, even well-managed information eventually becomes fragmented again.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -299,22 +313,11 @@
                     <path d="M10 22h4"></path>
                     <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
                   </svg>
-                  Tip
+                  Trusted data and AI
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>As organizations adopt AI, a single source of truth becomes even more critical. AI systems rely on consistent business context to generate useful outcomes. When business entities are duplicated or definitions are inconsistent across systems, AI receives conflicting inputs — and its outputs reflect that unreliability. A trusted business view is the foundation that makes AI dependable.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                  </svg>
-                  Warning
-                </p>
-                <p>Add a warning placeholder here for common risks.</p>
-              </div>
             </div>
           </section>
         </div>
