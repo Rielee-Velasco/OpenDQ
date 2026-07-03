@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 4: Identifying Duplicates and Inconsistencies - Master Data Management</title>
+  <title>Identifying Duplicates and Inconsistencies - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-4" data-page-id="module-4-3-identifying-duplicates-and-inconsistencies.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 4: Identifying Duplicates and Inconsistencies</h1>
+        <h1 class="header-title">Identifying Duplicates and Inconsistencies</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Identifying Duplicates and Inconsistencies</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/CeWa1VsV1Yl"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How duplicates accumulate over time, how probabilistic matching works and why it requires business input, and how inconsistencies corrupt AI feature engineering at the source.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,33 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
+              <!-- Section 1 — The Scale of the Duplicate Problem -->
+              <p class="course-overview-subtitle">The Scale of the Duplicate Problem</p>
+
+              <p>Duplicate records are not a one-time problem that organizations can solve and move on from. They are a symptom of systemic gaps in how data is created, validated, and governed across the organization's technology landscape. System migrations introduce duplicates when legacy records are loaded without deduplication checks. Acquisitions introduce duplicates when two organizations' data is merged without entity resolution. Manual data entry introduces duplicates when validation rules are absent or inconsistently applied.</p>
+
+              <p>MDM addresses these root causes — not just the existing duplicate population — by establishing the governance controls and matching capabilities that prevent new duplicates from accumulating at the same rate.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-duplicate-scale.png" alt="A timeline showing a customer database growing over five years. The duplicate rate starts at 8%, jumps to 19% after a new CRM is implemented, reaches 27% after an acquisition, then falls to 3% with 94% golden record coverage after MDM is implemented and deduplication begins." class="course-visual-image">
+                <figcaption>Duplicates accumulate through system changes, acquisitions, and the absence of prevention controls — MDM addresses all three.</figcaption>
               </div>
+
+              <!-- Section 2 — Probabilistic Matching in Practice -->
+              <p class="course-overview-subtitle">Probabilistic Matching in Practice</p>
+
+              <p>Probabilistic matching is a powerful technique but a configurable one — its performance depends heavily on the weights assigned to each field and the thresholds that define the review zone. The weight assigned to a customer's email address relative to their phone number should reflect the organization's knowledge of how reliably each field is populated and how often it changes.</p>
+
+              <p>The threshold that defines the review zone should reflect the organization's tolerance for false positives relative to false negatives — a higher auto-match threshold reduces review burden but increases the risk of merging records that should remain separate.</p>
+
+              <ul class="course-list">
+                <li>Tokenize — break name and address fields into comparable tokens</li>
+                <li>Score — apply similarity algorithms to each field pair, from exact match to no match</li>
+                <li>Weight — multiply each field score by its configured importance weight</li>
+                <li>Aggregate — sum weighted scores to produce an overall match confidence score</li>
+                <li>Classify — apply thresholds to route each pair to auto-match, review, or auto-reject</li>
+              </ul>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +82,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Business input into matching configuration is not optional — it is what makes the output trustworthy. Involve domain owners when setting field weights and review thresholds. They know which attributes are reliably populated, which change frequently, and what the cost of a false merge looks like in their operational context.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-probabilistic-matching.png" alt="A step-by-step probabilistic matching process showing two customer records being tokenized, scored by field pair similarity, weighted by field importance, aggregated into an overall match confidence score, and classified into auto-match, review, or auto-reject based on configured thresholds." class="course-visual-image">
+                <figcaption>Probabilistic matching is as good as the weights and thresholds configured — which requires business input, not just technical judgment.</figcaption>
+              </div>
+
+              <!-- Section 3 — Inconsistencies and AI Feature Engineering -->
+              <p class="course-overview-subtitle">Inconsistencies and AI Feature Engineering</p>
+
+              <p>Feature engineering — the process of transforming raw data into the inputs an AI model actually uses — is extremely sensitive to inconsistencies. When the same entity carries different values for the same attribute across source systems, feature engineering pipelines must make arbitrary choices about which value to use, often without visibility into which source is most reliable.</p>
+
+              <p>The result is features that encode the inconsistency rather than resolving it — and models that learn from that encoded confusion. MDM golden records eliminate this problem at the source by providing a single, governed value for every attribute before feature engineering begins.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +106,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Inconsistencies do not just create data management problems — they create feature engineering problems that distort model behavior. A product entity classified as "Electronics," "Consumer Electronics," and "CE" across three source systems produces three different encoded feature values for the same product, corrupting every category-based prediction the model makes.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-inconsistency-feature-engineering.png" alt="A feature engineering pipeline where a product entity enters from three source systems with different category classifications — Electronics, Consumer Electronics, and CE — resulting in three different encoded values that confuse the model. The remediated version shows an MDM golden record supplying a single governed category value that produces a clean, consistent feature." class="course-visual-image">
+                <figcaption>Inconsistencies do not just create data management problems — they create feature engineering problems that distort model behavior.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Finding duplicates and inconsistencies is the diagnostic work. Resolving them into governed golden records is what transforms the data into something AI-ready.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-duplicates-summary.png" alt="A two-panel layout. The left panel shows the problem: duplicate types — exact, near, cross-system — and inconsistency patterns — cross-field, cross-system, temporal — each with an AI harm callout. The right panel shows the solution: detection methods — deterministic, probabilistic, AI-assisted — consistency checks, and golden record creation, each with an AI benefit callout." class="course-visual-image">
+                <figcaption>Finding duplicates and inconsistencies is the first step. Resolving them into governed golden records is what makes the data AI-ready.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
