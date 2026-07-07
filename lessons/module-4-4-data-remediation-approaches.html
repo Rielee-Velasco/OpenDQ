@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 4: Data Remediation Approaches - Master Data Management</title>
+  <title>Data Remediation Approaches - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-4" data-page-id="module-4-4-data-remediation-approaches.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 4: Data Remediation Approaches</h1>
+        <h1 class="header-title">Data Remediation Approaches</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Data Remediation Approaches</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/9QR5LYXm80t"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How survivorship rules shape the golden record, why enrichment source trust matters for AI training data, and how to sequence MDM remediation milestones as formal gates in the AI development timeline.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Survivorship Rules -->
+              <p class="course-overview-subtitle">Survivorship Rules — The Logic Behind the Golden Record</p>
+
+              <p>Survivorship rules are the logic that determines which field value from which source system populates the golden record when multiple records for the same entity are merged. They are one of the most consequential configuration decisions in MDM — and one of the least discussed outside of technical teams.</p>
+
+              <p>Getting survivorship rules right requires business input: which source system is most reliable for each field type, how recently updated values should be weighted against historically accurate sources, and whether completeness should override recency when values conflict. For AI programs, field values that become AI features should be sourced from the most accurate system for that feature type — not simply the most recently updated system, which may reflect a data entry error rather than a real-world change.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,20 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Survivorship rules encode the organization's knowledge about which sources are most trustworthy for each field. Examples: legal name — most recently updated source wins; email address — source with highest historical accuracy wins; primary address — value verified against postal authority reference data wins. Each rule reflects a deliberate business decision, not a default setting.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m4-survivorship-rules.png" alt="A survivorship rule configuration panel for a customer domain showing five fields — legal name, email address, primary address, industry classification, and annual revenue — each with a different configured survivorship logic reflecting which source system is most trustworthy for that specific field type." class="course-visual-image">
+                <figcaption>Survivorship rules encode the organization's knowledge about which sources are most trustworthy for each field.</figcaption>
               </div>
+
+              <!-- Section 2 — Enrichment Sources and Trust Hierarchies -->
+              <p class="course-overview-subtitle">Enrichment Sources and Trust Hierarchies</p>
+
+              <p>Not all enrichment sources deliver the same quality, and organizations that treat all enrichment as equivalent introduce a new source of data quality risk. Internal authoritative systems — records confirmed and maintained by the business teams responsible for them — are the most reliable enrichment source. Commercial data enrichment providers vary significantly in accuracy, coverage, and update frequency, and their fitness for AI training data should be assessed against the same quality dimensions applied to internal data.</p>
+
+              <p>Inferred or derived values carry the highest risk for AI training data, because they introduce model assumptions into the data layer before the AI model has been trained — potentially creating circular reasoning if the model is later used to validate the derived values it was trained on.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Enrichment source trust determines whether enriched data improves or degrades AI model quality. Using inferred or derived values as AI training features without flagging them as such risks training a model on assumptions — and then using that model to validate the assumptions it was built on. Always track enrichment source provenance alongside the enriched values themselves.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-enrichment-trust.png" alt="A trust hierarchy pyramid for customer data enrichment with three tiers: Internal Authoritative Systems at the top, Trusted Third-Party Providers in the middle, and Inferred or Derived Values at the bottom. Each tier is labeled with its appropriate use case and its risk profile for AI training data." class="course-visual-image">
+                <figcaption>Enrichment source trust determines whether enriched data improves or degrades AI model quality.</figcaption>
+              </div>
+
+              <!-- Section 3 — The Remediation and AI Development Timeline -->
+              <p class="course-overview-subtitle">The Remediation and AI Development Timeline</p>
+
+              <p>One of the most valuable governance practices organizations can adopt is the establishment of formal dependency gates between MDM remediation milestones and AI development phases. Model training should not begin until the golden records for all required domains have been created and certified. Model deployment should not proceed until the pipelines delivering master data to the production model have been assessed and governed.</p>
+
+              <p>These gates prevent the most common and costly AI data quality failure — a model that reaches deployment with training data quality problems that were known but not resolved because the AI development timeline was not coordinated with the MDM remediation schedule.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>Make MDM remediation milestones explicit gates in your AI project plan — not background work running in parallel. Golden record creation should be a named prerequisite for model training sign-off. Pipeline certification should be a named prerequisite for deployment approval. When these dependencies are invisible to the AI development team, they get skipped under schedule pressure.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-remediation-ai-timeline.png" alt="A dual-track timeline showing AI Development milestones on top and MDM Remediation milestones below, with dependency arrows connecting MDM outputs to AI development gates. Golden record creation must precede model training; pipeline certification must precede model deployment." class="course-visual-image">
+                <figcaption>AI development gates should not open until the required MDM remediation milestones are complete.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Remediation is only complete when the fixed data has been certified against the quality thresholds the organization defined before assessment began.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-remediation-summary.png" alt="A four-stage horizontal flow showing the data remediation journey: Prioritize — rank issues by business value, AI impact, and remediation effort; Remediate — apply the right method for each problem type; Prevent — embed prevention controls at data entry and integration points; Certify — confirm remediated data meets quality thresholds for operational use and AI readiness." class="course-visual-image">
+                <figcaption>Remediation without certification is effort without evidence. Confirm the outcome before declaring the work done.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
