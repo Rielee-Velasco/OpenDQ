@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: MDM Platforms and Architectures - Master Data Management</title>
+  <title>MDM Platforms and Architectures - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-5" data-page-id="module-5-1-mdm-platforms-and-architectures.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 5: MDM Platforms and Architectures</h1>
+        <h1 class="header-title">MDM Platforms and Architectures</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 2 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">MDM Platforms and Architectures</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/DtDIdd828sL"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How MDM architectures evolve over time, what evaluation criteria matter most when selecting a platform — including AI readiness support — and how AI is increasingly embedded within MDM platforms themselves.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,20 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Architecture Evolution Over Time -->
+              <p class="course-overview-subtitle">Architecture Evolution Over Time</p>
+
+              <p>Organizations rarely implement their target MDM architecture in a single program phase. Most begin with a registry or consolidation approach — lower implementation complexity, faster time to value, and sufficient for proving the MDM concept and demonstrating early business impact. As the program matures and organizational confidence in MDM governance grows, the architecture typically evolves toward coexistence or centralized models for the highest-priority domains.</p>
+
+              <p>This evolutionary approach is deliberate and appropriate — it allows organizations to build the governance muscle, the stakeholder alignment, and the technical expertise that more complex architectures require before committing to the full transformation they represent.</p>
+
+              <ul class="course-list">
+                <li>Registry — quick to implement, establishes a cross-reference index, proves the MDM concept with minimal disruption</li>
+                <li>Consolidation — golden record repository created, analytics and AI pipelines connected to a governed read layer</li>
+                <li>Coexistence — golden records published back to source systems, operational consistency achieved across the landscape</li>
+                <li>Centralized — selected domains fully centralized where governance requirements and organizational readiness justify it</li>
+              </ul>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,20 +69,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Few organizations start at Phase 4. Most evolve toward it as the program matures and value is demonstrated. Starting with a registry or consolidation architecture is not a sign of limited ambition — it is a sign of organizational self-awareness about what governance capability currently exists and what needs to be built before more complex architectures can succeed.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m5-architecture-evolution.png" alt="A maturity progression showing a typical organization's MDM architectural journey across four phases: Registry, Consolidation, Coexistence, and Centralized, with each phase building on the governance capability and organizational confidence established by the previous one." class="course-visual-image">
+                <figcaption>Few organizations start at Phase 4. Most evolve toward it as the program matures and value is demonstrated.</figcaption>
               </div>
+
+              <!-- Section 2 — MDM Platform Evaluation Criteria -->
+              <p class="course-overview-subtitle">MDM Platform Evaluation Criteria</p>
+
+              <p>Platform evaluation for MDM has become more complex as AI readiness requirements have been added to the traditional functional checklist. Organizations that evaluate MDM platforms only against traditional criteria — entity resolution accuracy, stewardship workflow support, integration breadth — may select a platform that performs well on established capabilities but lacks the AI pipeline connectivity and governed data export features their AI programs will require.</p>
+
+              <p>AI readiness support should be a mandatory evaluation dimension, assessed against concrete requirements: can the platform deliver golden records to a feature store? Can it export governed training datasets with full provenance metadata? Can it monitor data drift in the features it supplies to production models?</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +93,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>AI readiness support should be a mandatory evaluation criterion — not an optional enhancement. Platforms that cannot deliver golden records to a feature store, export governed training datasets with provenance metadata, or monitor data drift in production model inputs represent a strategic gap that will become expensive to address retroactively.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-platform-evaluation.png" alt="A structured evaluation framework with five assessment dimensions: Functional Completeness, Architecture Fit, Integration Ecosystem, AI Readiness Support, and Vendor Maturity. Each dimension includes a description of what to assess and why it matters for MDM program success." class="course-visual-image">
+                <figcaption>AI readiness support should be a mandatory evaluation criterion — not an optional enhancement.</figcaption>
+              </div>
+
+              <!-- Section 3 — The Emerging Role of AI Within MDM Platforms -->
+              <p class="course-overview-subtitle">The Emerging Role of AI Within MDM Platforms</p>
+
+              <p>The boundary between MDM as a producer of AI-ready data and MDM as a consumer of AI capabilities is increasingly blurred. Leading MDM platforms now embed machine learning across their core capabilities — using AI to improve matching accuracy, detect quality anomalies, recommend stewardship decisions, and optimize survivorship rules based on historical performance data.</p>
+
+              <p>For organizations evaluating MDM platforms, the sophistication of these embedded AI capabilities is becoming a meaningful differentiator — not because AI within MDM replaces governance judgment, but because it scales stewardship capacity and improves matching accuracy in ways that rule-based systems cannot match as data volumes and entity complexity grow.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>When evaluating embedded AI capabilities in MDM platforms, ask vendors to demonstrate six specific areas: AI-assisted matching, anomaly detection, stewardship recommendations, survivorship optimization, natural language data discovery, and automated lineage tracing. Platforms that can demonstrate all six are meaningfully ahead of those offering only one or two as preview features.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-ai-within-mdm.png" alt="Six capability cards showing where AI is embedded within modern MDM platforms: AI-Assisted Matching, Anomaly Detection, Stewardship Recommendations, Survivorship Optimization, Natural Language Data Discovery, and Automated Lineage Tracing, each with a description of how AI improves that capability beyond what rule-based systems deliver." class="course-visual-image">
+                <figcaption>AI within MDM platforms improves the quality and efficiency of MDM operations — not just the quality of MDM outputs.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The right architecture is not the most sophisticated one available — it is the one the organization can govern well today, with a clear path to evolve as capability grows.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-platforms-summary.png" alt="Four architecture cards arranged horizontally with increasing color intensity representing increasing implementation complexity: Registry, Consolidation, Coexistence, and Centralized. Each card notes its implementation weight, AI pipeline support level, and governance requirements. Beneath all four: Choose the architecture your organization can govern well — then evolve." class="course-visual-image">
+                <figcaption>Architecture ambition should match organizational readiness — not vendor capability demonstrations.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
