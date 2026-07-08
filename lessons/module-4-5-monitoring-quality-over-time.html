@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 4: Monitoring Quality Over Time - Master Data Management</title>
+  <title>Monitoring Quality Over Time - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-4" data-page-id="module-4-5-monitoring-quality-over-time.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 4: Monitoring Quality Over Time</h1>
+        <h1 class="header-title">Monitoring Quality Over Time</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Monitoring Quality Over Time</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/GcWNTYah6c4"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to design a data quality monitoring architecture, why data quality drift is the AI risk MDM is uniquely positioned to control, and how monitoring transparency transforms data quality from an IT metric into a business performance indicator.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,11 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Designing a Monitoring Architecture -->
+              <p class="course-overview-subtitle">Designing a Monitoring Architecture</p>
+
+              <p>A data quality monitoring architecture is the technical infrastructure that makes continuous quality visibility possible. At the collection layer, quality indicators are extracted from the MDM system and source systems on schedules appropriate to the rate of change in each domain. At the rule engine layer, these indicators are evaluated against defined thresholds and trend baselines, with exceptions flagged and categorized. At the alert and routing layer, exceptions are directed to the people responsible for resolving them — with AI pipeline exceptions routed to AI program teams in addition to standard stewardship workflows. At the reporting layer, trend data is aggregated into governance dashboards and scorecards visible at every level of the organization.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,20 +60,26 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>The four layers of a monitoring architecture each serve a distinct purpose: Collection surfaces raw quality signals; Rule Engine evaluates them against thresholds; Alert and Routing directs exceptions to the right people; Reporting turns trend data into governance visibility. All four are needed — a monitoring program missing any one layer will have gaps in its ability to detect, route, and report quality issues.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m4-monitoring-architecture.png" alt="A four-layer architecture diagram showing Data Collection at the base extracting quality indicators from MDM and source systems, a Rule Engine evaluating them against thresholds, an Alert and Routing layer directing exceptions to the right stewards and AI teams, and a Reporting layer aggregating trend data into dashboards and scorecards." class="course-visual-image">
+                <figcaption>A monitoring architecture turns continuous data quality signals into actionable governance information.</figcaption>
               </div>
+
+              <!-- Section 2 — Data Drift — A Deeper Look -->
+              <p class="course-overview-subtitle">Data Drift — A Deeper Look</p>
+
+              <p>Data drift is a well-known challenge in AI operations, but its relationship to data quality is often underappreciated. Covariate drift and concept drift are typically discussed as statistical phenomena requiring model retraining. Data quality drift — the degradation of the master data that feeds the model — is a governance failure that requires MDM intervention rather than model retraining alone.</p>
+
+              <p>An organization that retrains a model on degraded data will produce a new model that performs no better than the old one, because the root cause has not been addressed. MDM quality monitoring specifically targets data quality drift — detecting it early, routing it to the right resolution process, and ensuring that model retraining is triggered only when the underlying data has been restored to the quality level the model requires.</p>
+
+              <ul class="course-list">
+                <li>Covariate drift — input feature distributions change, but the feature-outcome relationship holds; model accuracy declines because inputs fall outside the training distribution</li>
+                <li>Concept drift — the relationship between features and outcomes changes; the patterns the model learned no longer reflect current reality</li>
+                <li>Data quality drift — master data feeding the model degrades; model performance declines not because the world changed but because the data describing it became less reliable</li>
+              </ul>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +90,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Data quality drift is the only type of drift that MDM monitoring directly controls — and it is more common than organizations realize. If a model's performance is declining and data quality drift is the cause, retraining on the same degraded data will not fix it. Resolve the data quality problem first, then retrain.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-data-drift-types.png" alt="Three drift type cards: Covariate Drift showing input feature distributions changing outside the training range; Concept Drift showing the feature-outcome relationship changing so learned patterns no longer apply; and Data Quality Drift showing master data degrading in completeness, consistency, and uniqueness, causing model performance to decline without any change in the real world." class="course-visual-image">
+                <figcaption>Data quality drift is the only type of drift that MDM monitoring directly controls — and it is more common than organizations realize.</figcaption>
+              </div>
+
+              <!-- Section 3 — Building a Quality Culture Through Monitoring Transparency -->
+              <p class="course-overview-subtitle">Building a Quality Culture Through Monitoring Transparency</p>
+
+              <p>One of the most powerful effects of transparent data quality monitoring is its impact on organizational behavior. When business teams can see the quality score of their data domain — and understand how that score affects their operational processes and their AI systems — they develop a stake in quality outcomes that purely technical data management programs cannot generate.</p>
+
+              <p>Data quality becomes visible as a shared responsibility rather than a background IT function. Domain business owners begin asking about their quality trends in governance reviews. Data entry teams take prevention controls more seriously when they can see the impact of their inputs on downstream quality scores. This behavioral shift — from data quality as an IT metric to data quality as a business performance indicator — is one of the most durable outcomes a well-designed monitoring program can produce.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>Share quality scorecards with business domain owners, not just data teams. When business users can see the quality score for their domain, receive alerts when scores cross thresholds affecting their processes, and are recognized when their domain sustains quality targets, quality ownership shifts from IT to the business. That shift is worth more than any technical monitoring capability on its own.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-quality-culture.png" alt="Two organizational cultures compared: Culture A where quality monitoring is hidden inside the data team, leaving business users with no visibility or ownership; and Culture B where monitoring is shared transparently, giving business users visibility into their domain scores, alerts when quality affects their processes, and recognition when targets are sustained." class="course-visual-image">
+                <figcaption>Transparency connects data quality monitoring to the business behaviors that determine quality outcomes.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Effective monitoring answers three questions for every stakeholder: what to watch, how to watch it, and who is responsible for acting when something needs attention.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m4-monitoring-summary.png" alt="A three-column layout. Column 1 — What to Monitor: six quality dimensions, AI-specific indicators including feature drift and entity resolution accuracy, and pipeline governance status. Column 2 — How to Monitor: automated rule checks, threshold alerts, trend dashboards, and quarterly scorecards. Column 3 — Who Acts on It: data stewards for daily exceptions, domain councils for monthly trends, AI program teams for model readiness, and executive sponsors for quarterly program health." class="course-visual-image">
+                <figcaption>Monitoring connects data quality evidence to the governance decisions that keep MDM and AI programs on track.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
