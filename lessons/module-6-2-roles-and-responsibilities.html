@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 6: Roles and Responsibilities - Master Data Management</title>
+  <title>Roles and Responsibilities - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-6" data-page-id="module-6-2-roles-and-responsibilities.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 6: Roles and Responsibilities</h1>
+        <h1 class="header-title">Roles and Responsibilities</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Roles and Responsibilities</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/qh2oIKsj7yR"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: Why governance titles without documented decision rights create accountability gaps, how organizations are formalizing AI model ownership to connect AI governance to data governance, and what the full MDM governance role hierarchy looks like.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Why Role Clarity Requires More Than a Title -->
+              <p class="course-overview-subtitle">Why Role Clarity Requires More Than a Title</p>
+
+              <p>Many MDM programs assign governance titles — data steward, domain owner — without documenting the specific decision rights, escalation paths, and time commitments that come with them. A title alone does not create accountability. Organizations that document roles with the same specificity as a RACI matrix entry see far fewer disputes about who should act when a problem arises.</p>
+
+              <p>A well-defined governance role answers three questions explicitly: what decisions am I authorized to make without escalating? Who do I escalate to when a decision is outside my authority? And how much of my time is this role expected to require each week or month?</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +62,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>When defining governance roles, document decision rights, escalation paths, and time commitment expectations explicitly — not just the title and a vague scope statement. A data steward who knows they are authorized to resolve field-level conflicts within their domain, but must escalate cross-domain conflicts to the domain council, will act with confidence. One who is simply told they are "responsible for data quality" will hesitate every time a decision has any ambiguity.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-role-clarity.png" alt="Two versions of a Data Steward role description side by side. The vague version says only: Responsible for data quality. The specific version shows a documented list of decision rights, escalation paths, and time commitment expectations, demonstrating how specificity transforms a title into an actionable accountability." class="course-visual-image">
+                <figcaption>Specific, documented role definitions are what make accountability real.</figcaption>
+              </div>
+
+              <!-- Section 2 — The Emerging AI Model Owner Role in Practice -->
+              <p class="course-overview-subtitle">The Emerging AI Model Owner Role in Practice</p>
+
+              <p>Historically, AI model owners were accountable for model performance but not formally connected to the data governance structure that produced their training data. Organizations addressing this gap require model owners to complete a governance checklist before deployment — confirming data certification, documenting lineage, and establishing a direct relationship with the relevant domain data owner.</p>
+
+              <p>This closes an accountability gap that has caused real governance failures when AI models underperform due to data issues nobody was formally responsible for catching. Formalizing AI model ownership creates a direct line between AI program governance and MDM data governance — so that when a model fails, there is always a documented owner of both the model and the data it depends on.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>If your organization has AI models in production but no formal AI model owner role connected to the MDM governance structure, you have an accountability gap. When those models underperform due to data quality issues, the question of who is responsible — the model team, the data team, or the domain owner — will produce conflict rather than resolution. Define and document the AI model owner role before the first model goes live, not after the first failure.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-ai-model-owner-practice.png" alt="A governance checklist required of every AI model owner before deployment, showing four items: data lineage documented, training data certification confirmed, drift monitoring connected, and escalation contact for the relevant data domain owner identified. The checklist formalizes the connection between AI model governance and MDM data governance." class="course-visual-image">
+                <figcaption>Formalizing AI model ownership closes the accountability gap between data governance and AI governance.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Every role in the MDM governance hierarchy has a specific, documented accountability — including for AI readiness. The AI model owner role is what connects that hierarchy to the AI program.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-roles-summary.png" alt="A five-tier governance role hierarchy diagram from Executive Sponsor at the top through Chief Data Officer, Domain Data Owner, and Data Steward at the bottom. The AI Model Owner role is shown as a connecting role between domain governance and AI program governance, with documented accountabilities at each tier including specific AI readiness responsibilities." class="course-visual-image">
+                <figcaption>Every role in this hierarchy has a specific, documented accountability — including for AI readiness.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

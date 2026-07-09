@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 6: Policies and Standards - Master Data Management</title>
+  <title>Policies and Standards - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-6" data-page-id="module-6-3-policies-and-standards.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 6: Policies and Standards</h1>
+        <h1 class="header-title">Policies and Standards</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Policies and Standards</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/gZ5hJWqR0Cy"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to write data standards that are actually enforceable, why AI data usage policy should be structured to align with emerging regulation from the start, and how policies turn governance principles into rules that can be tested and audited.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Writing Standards That Are Actually Enforceable -->
+              <p class="course-overview-subtitle">Writing Standards That Are Actually Enforceable</p>
+
+              <p>A common weakness in early-stage MDM governance is writing standards in aspirational language that cannot actually be tested against real data. An enforceable standard specifies a measurable threshold, the dimension it applies to, the domain or field it covers, and the cadence at which compliance is verified.</p>
+
+              <p>Standards that meet this bar can be automated as monitoring rules — closing the loop between policy and operational practice. A standard that cannot be tested against real data is not yet a usable standard. It is an aspiration that will be interpreted differently by every team that reads it.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +62,46 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Test every standard you write against this question: could a monitoring rule be configured to check compliance with this statement automatically? If yes, the standard is enforceable. If no — if the answer depends on subjective interpretation — rewrite it until it passes. Vague standards do not protect the organization; they create the appearance of governance while leaving all the difficult decisions unresolved.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
+              <div class="course-visual-block">
+                <img src="../assets/m6-enforceable-standards.png" alt="A two-column comparison between a vague standard — Customer data should be high quality — and an enforceable standard — Customer email completeness must be at or above 95% for any field certified for AI feature use, verified at each quarterly certification cycle. The enforceable version specifies a measurable threshold, a dimension, a field scope, and a verification cadence." class="course-visual-image">
+                <figcaption>A standard that cannot be tested against real data is not yet a usable standard.</figcaption>
+              </div>
+
+              <!-- Section 2 — AI Data Usage Policy and Regulatory Alignment -->
+              <p class="course-overview-subtitle">AI Data Usage Policy and Regulatory Alignment</p>
+
+              <p>Organizations writing AI data usage policy today are increasingly structuring it to align with the themes appearing in AI regulation across multiple jurisdictions — provenance documentation, bias and fairness review, explainability requirements, and audit trail retention. Building this alignment into internal policy from the start reduces the work required to demonstrate compliance as external requirements formalize.</p>
+
+              <p>It also gives the organization a head start on governance maturity regardless of which specific regulatory framework eventually applies to their AI use cases — because the foundational documentation, review processes, and audit trails will already be in place.</p>
+
+              <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
                   <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Warning
+                  Note
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Internal AI data usage policy increasingly mirrors the structure of external AI regulation. The four themes appearing most consistently across jurisdictions are: data provenance, bias and fairness assessment, explainability, and audit trail retention. Structuring internal policy around these themes now means the organization will not need to rebuild its governance documentation when external requirements formalize — it will only need to verify alignment.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-ai-policy-regulatory.png" alt="A policy alignment map showing how sections of an internal AI data usage policy map to common external regulatory themes: data provenance documentation, bias and fairness assessment, explainability requirements, and audit trail retention. Each internal policy section is linked to the regulatory theme it addresses." class="course-visual-image">
+                <figcaption>Internal AI data usage policy increasingly mirrors the structure of external AI regulation.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Policies turn principles and roles into rules that can be tested, audited, and enforced — connecting governance intent to governance practice across every domain and AI use case.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-policies-summary.png" alt="Five MDM policy categories shown as a connected library: data quality standards, data usage policy, AI data certification policy, access and security policy, and retention and lineage policy. Each category is linked to the governance role accountable for it and its AI relevance, showing how the policy library covers the full scope of MDM and AI governance requirements." class="course-visual-image">
+                <figcaption>Policies turn principles and roles into rules that can be tested, audited, and enforced.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

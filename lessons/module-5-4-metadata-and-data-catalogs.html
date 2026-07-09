@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: Metadata and Data Catalogs - Master Data Management</title>
+  <title>Metadata and Data Catalogs - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-5" data-page-id="module-5-4-metadata-and-data-catalogs.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 5: Metadata and Data Catalogs</h1>
+        <h1 class="header-title">Metadata and Data Catalogs</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -21,7 +21,6 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Metadata and Data Catalogs</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — The Business Glossary -->
+              <p class="course-overview-subtitle">The Business Glossary — Connecting Technical Data to Business Meaning</p>
+
+              <p>The business glossary is a foundational metadata artifact that many organizations underinvest in — and one whose absence creates persistent problems for AI programs. When a data scientist building a churn prediction model uses the term "customer" differently from the MDM platform's entity resolution scope, the model is trained on a different population than the business intends. When an AI product recommendation model uses a different definition of "active customer" from the one the sales team tracks in CRM, the model's outputs cannot be reconciled with sales performance metrics.</p>
+
+              <p>The business glossary creates a shared definitional layer that aligns the MDM platform, AI models, and business reporting around a common understanding of every entity the organization manages.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>A well-structured business glossary entry for an entity like "Customer" includes more than a definition — it links to the related MDM domain, names the owning business function and data steward, lists synonyms used across systems, and includes an AI usage note specifying how the definition governs entity resolution scope for AI models. That AI usage note is what makes the glossary actionable for data scientists, not just business analysts.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-business-glossary.png" alt="A business glossary entry for the term Customer showing: Business Definition, Synonyms, Related MDM Domain, Owning Business Function, Data Steward, Linked Technical Assets including the customer golden record dataset and source system tables, and an AI Usage Note specifying that this definition governs entity resolution scope for all customer-facing AI models." class="course-visual-image">
+                <figcaption>The business glossary ensures that technical data assets and AI models share the same definition of every entity they reference.</figcaption>
+              </div>
+
+              <!-- Section 2 — Active Metadata -->
+              <p class="course-overview-subtitle">Active Metadata — From Passive Documentation to Intelligent Governance</p>
+
+              <p>Active metadata management represents a significant evolution in how data catalogs contribute to MDM and AI governance. Traditional catalogs are passive — they document metadata and rely on humans to consult them before making data usage decisions. Active metadata catalogs monitor the metadata they manage and trigger automated actions when conditions change.</p>
+
+              <p>When a quality score drops below an AI readiness threshold, the catalog automatically updates the certification status, notifies the AI program team, and flags any models currently using the affected dataset. When a source system change propagates through the MDM platform and alters golden records, the catalog automatically generates an impact assessment showing which AI models depend on the affected entities. This automation transforms data governance from a reactive, manually intensive process into a proactive, scalable capability.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +86,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>When evaluating data catalog tools, ask vendors specifically about active metadata capabilities — what governance actions can the catalog trigger automatically, and what conditions can it monitor? The gap between catalogs that merely document metadata and those that act on it is significant, and the latter are what organizations with growing AI portfolios actually need.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-active-metadata.png" alt="A comparison between passive and active metadata management. Passive: metadata is documented and read by humans who make governance decisions manually. Active: metadata triggers automated actions — a quality score drop flags a dataset as pending recertification and notifies the AI team; a source system change automatically generates an impact assessment routed to the model owner." class="course-visual-image">
+                <figcaption>Active metadata turns the catalog from a documentation tool into a governance automation layer.</figcaption>
+              </div>
+
+              <!-- Section 3 — Data Catalogs and AI Model Governance -->
+              <p class="course-overview-subtitle">Data Catalogs and AI Model Governance</p>
+
+              <p>As AI governance frameworks mature, the data catalog is emerging as the system of record that connects data governance to model governance. An AI model registry entry in the catalog links every model to the specific training data versions it was built on, the MDM quality scores that data carried at training time, the survivorship rules that produced its feature values, and the current monitoring status of the master data domains it depends on.</p>
+
+              <p>When quality monitoring detects data drift in a domain that feeds a production model, the catalog can surface that connection immediately — enabling the AI governance process to assess whether the drift is significant enough to require model retraining, without requiring anyone to manually investigate the relationship between the quality event and the affected model.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +110,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Organizations that keep their MDM platform, data catalog, and AI model registry as separate, unconnected tools create a governance blind spot — data quality events in MDM will not automatically surface in AI model monitoring, and AI governance reviews will not have visibility into the data quality status of the domains feeding production models. The cost of that blind spot grows with every AI model deployed.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-catalog-model-governance.png" alt="An AI model registry entry in a data catalog showing fields for Model Name, Model Version, Training Data linked to a specific MDM golden record dataset version with its quality score at training time, Features Used linked to golden record fields and survivorship rules, Current Performance Metrics, Data Drift Status linked to the MDM monitoring dashboard, and a Recertification Required flag triggered by a recent quality score change in the customer domain." class="course-visual-image">
+                <figcaption>The data catalog is becoming the connective tissue between MDM governance and AI model governance.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Metadata is the language that makes governed master data understandable. The catalog is the library that makes it findable. Together they are what AI-ready data governance looks like in practice.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-metadata-summary.png" alt="A three-panel layout. Panel 1 — Four Metadata Types: technical, business, operational, and AI readiness, each with key fields and update mechanism. Panel 2 — Data Catalog Capabilities: search and discovery, asset profiles, lineage visualization, AI certification management, and self-service data access. Panel 3 — MDM-Catalog Integration: automated metadata flow from the MDM platform, AI readiness certification lifecycle, and impact assessment automation." class="course-visual-image">
+                <figcaption>Metadata is the language that makes governed master data understandable. The catalog is the library that makes it findable.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

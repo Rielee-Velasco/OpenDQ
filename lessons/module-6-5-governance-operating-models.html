@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 6: Governance Operating Models - Master Data Management</title>
+  <title>Governance Operating Models - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-6" data-page-id="module-6-5-governance-operating-models.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 6: Governance Operating Models</h1>
+        <h1 class="header-title">Governance Operating Models</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Governance Operating Models</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/MY5gGLyZunA"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to design governance meeting cadence around actual decision speed, how reporting flows should connect the three operating model tiers, and how the full governance operating model brings principles, roles, policies, and stewardship together as one connected system.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,19 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Designing Meeting Cadence Around Decision Speed -->
+              <p class="course-overview-subtitle">Designing Meeting Cadence Around Decision Speed</p>
+
+              <p>A common mistake in operating model design is applying a single meeting cadence to every kind of governance decision. Operational data quality exceptions need resolution measured in days — which is why stewardship meets weekly and often acts between meetings entirely. Domain-level standard changes can responsibly take weeks, aligning with a monthly council cadence. Strategic decisions — including major policy or architecture choices — can take a quarter without harming the business.</p>
+
+              <p>Trying to force strategic decisions into a faster cadence usually produces rushed, poorly consulted decisions. And trying to handle operational exceptions at a monthly cadence means AI certification queues back up for weeks while routine data quality issues wait for a meeting that hasn't happened yet.</p>
+
+              <ul class="course-list">
+                <li>Stewardship teams — weekly cadence or faster; operational exceptions that affect AI pipelines may require same-day resolution</li>
+                <li>Domain councils — monthly cadence; standard changes, cross-domain conflicts, and domain quality trend reviews</li>
+                <li>Steering committee — quarterly cadence; strategic direction, policy decisions, AI governance program health, and executive reporting</li>
+              </ul>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +68,46 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Design cadence around how fast each type of decision actually needs to move — not a generic governance template. The most efficient operating models include clear decision routing rules that tell stewards and domain owners which tier handles which type of issue, so time-sensitive decisions never get queued behind a monthly meeting when they need a daily resolution.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
+              <div class="course-visual-block">
+                <img src="../assets/m6-cadence-design.png" alt="A decision speed map showing three decision types and their appropriate cadence: operational exceptions requiring resolution in days mapped to weekly stewardship meetings; domain standard changes requiring resolution in weeks mapped to monthly council meetings; and strategic and policy decisions that can responsibly take a quarter mapped to quarterly steering committee meetings." class="course-visual-image">
+                <figcaption>Cadence should be designed around how fast each type of decision needs to move, not a generic governance template.</figcaption>
+              </div>
+
+              <!-- Section 2 — Reporting That Connects the Tiers -->
+              <p class="course-overview-subtitle">Reporting That Connects the Tiers</p>
+
+              <p>The three-tier operating model only functions well when information flows upward in a digestible form. Stewardship teams generate detailed exception logs; domain councils need a summarized trend view of those logs, not the raw data; the steering committee needs a further summarized scorecard showing business value and AI readiness trends, not domain-level detail.</p>
+
+              <p>Designing this reporting rollup deliberately — rather than expecting each tier to extract what they need from the tier below's raw data — is what keeps the operating model efficient as the organization scales. Each tier should see a summarized version of what the tier below it is handling, with escalations surfaced and trends highlighted rather than raw exception counts.</p>
+
+              <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
                   <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Warning
+                  Note
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>AI readiness status should be visible at every level of the reporting rollup — not just in the steering committee scorecard. Stewardship teams should see which open exceptions are blocking AI certification. Domain councils should see AI readiness trends for their domain. The steering committee should see AI program health alongside overall governance health. This visibility ensures that AI readiness gaps are escalated at the right speed rather than buried in operational reporting.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-operating-model-reporting.png" alt="A reporting flow diagram showing stewardship exception logs rolling up into domain council monthly trend reports, which roll up into steering committee quarterly scorecards. AI readiness status is visible at every level of the rollup, and each tier receives summarized trend and exception information rather than raw data from the tier below." class="course-visual-image">
+                <figcaption>Each tier should see a summarized version of what the tier below it is handling — not raw data, but trend and exception information.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The operating model is what makes every other governance discipline — principles, roles, policies, and stewardship — function as one connected system rather than a collection of separate artifacts.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m6-operating-models-summary.png" alt="A vertical three-tier governance operating model diagram showing the Steering Committee at quarterly cadence, Domain Councils at monthly cadence, and Stewardship Teams at weekly cadence. Escalation paths flow upward and reporting flows downward between tiers, with AI governance responsibilities labeled at each tier." class="course-visual-image">
+                <figcaption>This operating model is what makes governance principles, roles, policies, and stewardship function as one connected system.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

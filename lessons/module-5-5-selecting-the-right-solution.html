@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: Selecting the Right Solution - Master Data Management</title>
+  <title>Selecting the Right Solution - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-5" data-page-id="module-5-5-selecting-the-right-solution.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 5: Selecting the Right Solution</h1>
+        <h1 class="header-title">Selecting the Right Solution</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 6</span>
         </div>
@@ -21,7 +21,6 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Selecting the Right Solution</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Total Cost of Ownership -->
+              <p class="course-overview-subtitle">Total Cost of Ownership in MDM Solution Selection</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>Total cost of ownership calculations for MDM solutions consistently reveal that license or subscription costs represent a minority of the five-year investment. Integration development — connecting source systems to the MDM platform and governed data to downstream consumers — is typically the largest single cost category in the first two years. Ongoing operational costs — stewardship staffing, governance program management, platform administration — are the largest category in years three through five.</p>
+
+              <p>AI pipeline development and maintenance costs are growing rapidly as a TCO component and are frequently underestimated in initial selection analyses because they are incurred as the AI program scales rather than at implementation time. Organizations that evaluate MDM solutions on license cost alone systematically underestimate the true investment and make selection decisions that optimize for the wrong variable.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +62,70 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>License cost is typically less than 40% of five-year TCO. Select on total cost of ownership over five years — not on license cost in year one. Integration, staffing, and AI pipeline costs dominate the multi-year picture, and a platform that appears cheaper on license can easily become the most expensive option once the full TCO is modeled.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-tco-framework.png" alt="A five-year TCO breakdown diagram showing cost categories as horizontal bars across five years: license or subscription costs relatively flat; implementation and configuration high in year 1 then declining; integration development and maintenance moderate and ongoing; operational staffing growing as domains expand; AI pipeline development and maintenance growing in years 2 through 5 as AI programs scale." class="course-visual-image">
+                <figcaption>Select on total cost of ownership over five years — not on license cost in year one.</figcaption>
+              </div>
+
+              <!-- Section 2 — Domain-Specific vs. Enterprise Platforms -->
+              <p class="course-overview-subtitle">Domain-Specific MDM Solutions vs. Enterprise Platforms</p>
+
+              <p>The choice between domain-specific MDM tools and enterprise MDM platforms is one of the most common architecture decisions organizations face — and one where the right answer depends heavily on the organization's AI program ambitions. A domain-specific tool can be implemented quickly and delivers deep domain-specific capability at lower initial cost. But when AI programs begin referencing multiple entity types, the fragmented data supply chain that results from multiple domain-specific tools becomes a significant governance and integration burden.</p>
+
+              <p>Organizations that anticipate multi-domain AI programs within two to three years should evaluate enterprise MDM platforms capable of governing multiple domains from a unified architecture, rather than building a portfolio of single-domain tools that will require significant integration work to serve cross-domain AI use cases.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Domain-specific tools are appropriate for single-domain programs. Enterprise platforms are required when multi-domain AI programs emerge. A customer churn model that also references product purchase history and supplier fulfillment performance cannot be well-served by three separate domain tools — it needs a unified MDM architecture that can govern all three domains and deliver them through a single, coherent AI data supply chain.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-domain-specific.png" alt="A two-column comparison between Domain-Specific Tools on the left — purpose-built for one domain, faster implementation, lower initial cost, but limited to single-domain governance with fragmented AI pipelines — and Enterprise MDM Platforms on the right — governing multiple domains from a single platform with unified AI data supply chain, higher initial complexity but broader long-term capability." class="course-visual-image">
+                <figcaption>Domain-specific tools are appropriate for single-domain programs. Enterprise platforms are required when multi-domain AI programs emerge.</figcaption>
+              </div>
+
+              <!-- Section 3 — Implementation Partner Selection -->
+              <p class="course-overview-subtitle">Implementation Partner Selection</p>
+
+              <p>The implementation partner selection for an MDM program is a consequential decision that receives less attention than platform selection in most organizations. The partner is responsible not just for technical implementation but for governance program design, stakeholder engagement, data migration quality, and increasingly, AI pipeline integration.</p>
+
+              <p>A technically capable implementation partner who lacks AI integration experience will deliver an MDM platform that is well-configured for operational use but poorly connected to the AI programs it is meant to support. Evaluating implementation partners against AI integration capability — asking specifically for reference implementations where MDM was connected to AI training pipelines, feature stores, or real-time AI inference services — has become a necessary step in partner selection for organizations with active AI programs.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>Assess implementation partners against four criteria: MDM platform expertise, domain knowledge, AI integration capability, and governance program design. An implementation partner's AI integration experience is now as important as their MDM platform certification — ask for specific reference implementations where MDM was connected to AI training pipelines or feature stores, not just traditional analytics integrations.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-implementation-partner.png" alt="Four partner assessment criteria shown as evaluation cards: MDM Platform Expertise — certified expertise with reference implementations of comparable scope; Domain Knowledge — experience governing the specific domains the program prioritizes; AI Integration Capability — demonstrated experience connecting MDM to AI training pipelines and feature stores; Governance Program Design — capability to design governance structures and stewardship workflows beyond technical implementation." class="course-visual-image">
+                <figcaption>An implementation partner's AI integration experience is now as important as their MDM platform certification.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>A structured selection process is not slower than an intuitive one — it is more defensible, more accurate, and far less likely to produce a decision that needs to be revisited.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-selection-summary.png" alt="A six-stage solution selection flow: Stage 1 — Define Requirements covering business goals, domain priorities, and AI readiness needs; Stage 2 — Assess Current State covering technology landscape and team capability; Stage 3 — Establish Criteria covering mandatory, preferred, and AI-specific requirements; Stage 4 — Evaluate Options through RFI, demonstrations, and reference checks; Stage 5 — Proof of Concept with real data and AI pipeline testing; Stage 6 — Decide by scoring against criteria, assessing TCO, and selecting." class="course-visual-image">
+                <figcaption>A structured selection process is not slower than an intuitive one. It is more defensible, more accurate, and less likely to produce a decision that needs to be revisited.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

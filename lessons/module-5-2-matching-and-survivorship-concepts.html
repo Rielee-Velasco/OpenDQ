@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: Matching and Survivorship Concepts - Master Data Management</title>
+  <title>Matching and Survivorship Concepts - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-5" data-page-id="module-5-2-matching-and-survivorship-concepts.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 5: Matching and Survivorship Concepts</h1>
+        <h1 class="header-title">Matching and Survivorship Concepts</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,7 +21,6 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Matching and Survivorship Concepts</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — The Economics of Matching Accuracy -->
+              <p class="course-overview-subtitle">The Economics of Matching Accuracy</p>
+
+              <p>The economics of matching accuracy are asymmetric and context-dependent. In financial services, false positives carry significant regulatory risk — incorrectly merging two customers' records can violate know-your-customer regulations and create serious compliance exposure. In retail and consumer industries, false negatives typically carry higher costs — fragmented customer records degrade personalization models and inflate customer acquisition costs by treating existing customers as new prospects. In healthcare, both error types carry clinical risk.</p>
+
+              <p>Organizations should define their acceptable thresholds for each error type based on their industry context, regulatory environment, and AI program requirements — rather than optimizing for a single composite matching accuracy score that obscures the tradeoff between precision and recall.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Matching accuracy is not a technical metric — it is a business performance indicator. False positives and false negatives both have measurable business costs and AI consequences. False positive merges corrupt golden records that feed AI models. False negatives fragment the entity history that AI personalization, forecasting, and risk models depend on.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-matching-economics.png" alt="A cost model diagram with two columns. False Positive Costs include incorrect merges requiring manual separation, AI models retrained on corrupted golden records, customer experience failures, and regulatory risk. False Negative Costs include fragmented customer history degrading AI personalization, duplicate supplier records inflating procurement costs, and split patient records creating clinical risk. The center reads: Both error types have measurable business costs — and both have AI consequences." class="course-visual-image">
+                <figcaption>Matching accuracy is not a technical metric. It is a business performance indicator.</figcaption>
+              </div>
+
+              <!-- Section 2 — Survivorship Rules and AI Feature Stores -->
+              <p class="course-overview-subtitle">Survivorship Rules and AI Feature Stores</p>
+
+              <p>The feature store pattern — a centralized repository of curated, versioned feature values that AI models consume during training and inference — is becoming an increasingly important integration point between MDM and AI programs. When survivorship rules in the MDM platform are designed with feature store requirements in mind, the golden record values that flow into the feature store are optimized for AI quality rather than just operational correctness.</p>
+
+              <p>This means configuring survivorship for AI-critical fields based on historical feature accuracy rather than standard business logic, implementing change detection that propagates golden record updates to feature store versions, and maintaining provenance metadata that allows feature store users to trace each feature value back to its source record and survivorship rule.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +86,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Establish the MDM-to-feature-store pipeline early in your AI program development — not after the first model is in production. Organizations that build this governed data supply chain from the start create a foundation that scales with their AI ambitions, rather than scrambling to retrofit governance onto a pipeline that was built without it.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-survivorship-feature-stores.png" alt="A pipeline diagram showing the MDM platform applying survivorship rules to create golden records, which are exported to a feature store organized by entity type. AI models read features from the feature store. The feature store monitors for feature drift and triggers MDM quality review when drift is detected." class="course-visual-image">
+                <figcaption>The feature store is the interface between MDM governance and AI model development.</figcaption>
+              </div>
+
+              <!-- Section 3 — Review Workflow Design for Human-in-the-Loop Matching -->
+              <p class="course-overview-subtitle">Review Workflow Design for Human-in-the-Loop Matching</p>
+
+              <p>The efficiency and consistency of human review for borderline match cases significantly affects the overall quality of entity resolution. Poorly designed review workflows — presenting records without context, requiring stewards to navigate away from the review interface to verify information, or failing to surface the AI matching model's recommendation — result in slower decision times, higher steward fatigue, and less consistent outcomes.</p>
+
+              <p>Well-designed review workflows present the record pair in a side-by-side comparison with field-level similarity scores, surface the ML model's recommendation and confidence level as a reference point, provide access to the steward's own previous decisions on similar cases, and maintain a full audit trail of every decision for governance reporting.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +110,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Review workflow design is not a UX afterthought — it directly determines the quality of your matching outcomes. Every decision a steward makes on a borderline pair becomes training data for the ML matching model. Inconsistent decisions caused by poor workflow design degrade the model over time, creating a compounding quality problem that becomes harder to reverse the longer it continues.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-review-workflow.png" alt="A review interface mockup showing a borderline match pair presented side by side with field-level similarity scores. Steward action options include Confirm Match, Reject Match, Request More Information, and Escalate to Domain Expert. An AI-suggested action shows the ML model recommending Confirm Match at 87% confidence, alongside an audit trail of previous decisions on similar record pairs." class="course-visual-image">
+                <figcaption>Well-designed review workflows reduce decision time and improve consistency across the stewardship team.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Matching and survivorship are not a single step — they are a three-stage process that ends not with a merged record, but with a governed golden record ready to power AI systems.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-matching-survivorship-summary.png" alt="A three-stage horizontal flow: Stage 1 — Detect, where deterministic, probabilistic, and ML matching identifies duplicate and near-duplicate record pairs; Stage 2 — Resolve, where confirmed matches are merged using survivorship rules configured for both operational correctness and AI feature quality; Stage 3 — Distribute, where governed golden records are published to downstream systems and AI pipelines with quality and provenance metadata attached." class="course-visual-image">
+                <figcaption>The golden record is not the end of the process. It is the beginning of what AI systems can do with trusted data.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

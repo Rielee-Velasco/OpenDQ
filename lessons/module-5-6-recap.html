@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Recap - Master Data Management</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-module-id="module-5" data-page-id="module-5-6-recap.html">
+  <div class="layout">
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+      <header class="header">
+        <h1 class="header-title">Module Recap</h1>
+        <div class="header-actions">
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 7 of 7</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="module-content">
+          <div class="card introduction-card">
+            <figure class="introduction-figure">
+              <div class="introduction-video-frame">
+                <iframe
+                  class="introduction-video"
+                  src="about:blank"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <figcaption class="introduction-caption">Video placeholder</figcaption>
+            </figure>
+          </div>
+
+          <section class="course-overview">
+            <h2 class="course-overview-title course-title-with-icon">
+              <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3l8 4v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V7l8-4z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              Module support notes
+            </h2>
+
+            <div class="course-overview-body">
+
+              <!-- Section 1 — What This Module Covered -->
+              <p class="course-overview-subtitle">What This Module Covered</p>
+
+              <p>The central argument of this module is that MDM technology selection and configuration decisions have direct and specific consequences for AI outcomes — and that organizations which treat technology as a neutral implementation detail, separate from AI strategy, consistently make technology choices that constrain their AI programs.</p>
+
+              <p>Every technology decision covered in this module has an AI dimension: architecture affects AI pipeline architecture; matching and survivorship configuration affects AI feature quality; integration patterns affect AI data latency; metadata and catalog design affects AI team productivity and governance auditability; and solution selection criteria that omit AI readiness requirements produce platforms that create technical debt for the AI program from day one.</p>
+
+              <ul class="course-list">
+                <li>MDM Platforms and Architectures — four architecture patterns offer different tradeoffs between implementation complexity and AI readiness support; choose the one the organization can govern well and evolve from there</li>
+                <li>Matching and Survivorship — matching finds duplicates; survivorship resolves them into golden records; both should be configured with AI feature quality as an explicit objective</li>
+                <li>Data Integration Tools — integration coverage determines MDM governance scope; integration patterns determine whether AI systems get current data; design for AI use case requirements from the start</li>
+                <li>Metadata and Data Catalogs — AI readiness metadata and catalog integration make governed data self-service for AI teams, reducing friction and eliminating informal workarounds that produce ungoverned training data</li>
+                <li>Selecting the Right Solution — selection on criteria, proof of concept on real data, and AI-specific evaluation dimensions produce technology decisions that serve both current needs and future AI ambitions</li>
+              </ul>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-recap-module-summary.png" alt="A one-page summary with five rows, one per module topic, each showing a title, a single-sentence summary, and an icon: MDM Platforms and Architectures, Matching and Survivorship, Data Integration Tools, Metadata and Data Catalogs, and Selecting the Right Solution." class="course-visual-image">
+                <figcaption>The MDM technology ecosystem is the operational layer that makes every strategic and governance discipline in this course real.</figcaption>
+              </div>
+
+              <!-- Section 2 — The AI Technology Thread Through Module 5 -->
+              <p class="course-overview-subtitle">The AI Technology Thread Through Module 5</p>
+
+              <p>The AI readiness thread through Module 5 is more specific than it was in Module 3. Where Module 3 established AI readiness as a strategic goal, Module 5 establishes the specific technology decisions that determine whether that goal is achievable.</p>
+
+              <p>The architecture pattern determines the reliability of the AI data supply chain. The matching and survivorship configuration determines the quality of the features AI models learn from. The integration pattern determines the currency of data in AI inference systems. The metadata and catalog design determines whether AI governance is manual and fragile or automated and scalable. And the solution selection criteria determine whether the MDM platform will remain a capable AI data partner as the organization's AI program grows.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Every layer of the MDM technology stack contributes to — or detracts from — the organization's AI readiness: MDM Platforms determine AI pipeline architecture; Matching and Survivorship determines golden record quality for AI features; Integration Tools determine AI data supply chain reliability; Metadata and Catalogs determine AI data discoverability and governance auditability; Solution Selection determines the AI capability ceiling of the chosen platform.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-recap-ai-thread.png" alt="A technology stack diagram with five layers corresponding to the module's five topics. Each layer is labeled with its AI readiness contribution: MDM Platforms — AI pipeline architecture; Matching and Survivorship — golden record quality for AI features; Integration Tools — AI data supply chain reliability and latency; Metadata and Catalogs — AI data discoverability and governance auditability; Solution Selection — AI capability ceiling of the chosen platform. A vertical arrow on the right labeled AI Readiness increases in intensity from bottom to top." class="course-visual-image">
+                <figcaption>Every layer of the MDM technology stack contributes to — or detracts from — the organization's AI readiness.</figcaption>
+              </div>
+
+              <!-- Section 3 — Preparing for Module 6 -->
+              <p class="course-overview-subtitle">Preparing for Module 6</p>
+
+              <p>Module 6 addresses the organizational dimension of MDM that technology alone cannot provide. An MDM platform can enforce data quality rules, but it cannot define what good data quality means for the business — that requires governance policy. A matching engine can identify duplicate candidates, but it cannot decide whether two records should be merged — that requires stewardship judgment. An integration layer can deliver governed data to AI pipelines, but it cannot certify that data as AI-ready — that requires governance process.</p>
+
+              <p>The governance frameworks covered in Module 6 are the organizational structures that transform MDM technology from a technical capability into a business program — giving every technology decision in this module the accountability framework it needs to deliver lasting value.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>As you move into Module 6, carry the technology decisions from this module into the governance design conversations. The governance framework should be designed with the MDM platform's capabilities and constraints in mind — stewardship workflows that depend on capabilities the platform doesn't have will fail, and governance policies that ignore the integration architecture will produce rules that cannot be enforced.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-recap-module6-preview.png" alt="A preview layout showing five Module 6 governance topic areas with icons: Governance Principles, Roles and Responsibilities, Policies and Standards, Stewardship Models, and Governance Operating Models, each with a brief description of its role in making MDM governance operational." class="course-visual-image">
+                <figcaption>Technology without governance is capability without accountability. Module 6 provides the framework.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The MDM technology ecosystem is not built once — it is selected deliberately, configured for AI readiness, governed continuously, and evolved as AI programs grow.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-recap-infographic.png" alt="An integrated architecture diagram showing all five Module 5 technology domains working together: the MDM Platform at center receiving from integration tools, feeding metadata to the catalog, delivering golden records through matching and survivorship, and connecting to AI pipelines. Each connection is labeled with its AI readiness contribution. Solution selection criteria frame the entire architecture." class="course-visual-image">
+                <figcaption>The MDM technology ecosystem is not built once. It is selected deliberately, configured for AI readiness, governed continuously, and evolved as AI programs grow.</figcaption>
+              </div>
+
+            </div>
+          </section>
+        </div>
+
+        <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
+          <a href="module-5-5-selecting-the-right-solution.html" class="btn btn-primary">Back</a>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 7 of 7</span>
+          <a href="module-6-0-intro.html" class="btn btn-accent">Next</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/sidebar-loader.js"></script>
+</body>
+</html>

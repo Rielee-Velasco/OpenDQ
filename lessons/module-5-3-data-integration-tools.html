@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 5: Data Integration Tools - Master Data Management</title>
+  <title>Data Integration Tools - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-5" data-page-id="module-5-3-data-integration-tools.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 5: Data Integration Tools</h1>
+        <h1 class="header-title">Data Integration Tools</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,7 +21,6 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Data Integration Tools</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
@@ -46,7 +45,19 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Integration Architecture Patterns for MDM -->
+              <p class="course-overview-subtitle">Integration Architecture Patterns for MDM</p>
+
+              <p>MDM integration architecture has evolved significantly with the rise of event-driven systems and cloud-native data platforms. Traditional hub-and-spoke integration remains appropriate for organizations with a limited number of source systems and batch-oriented AI programs. As integration volume grows and real-time AI requirements emerge, an integration bus or event streaming pattern becomes necessary.</p>
+
+              <p>Event streaming architectures are becoming the preferred pattern for organizations whose AI applications require sub-second access to current governed data — because they eliminate the latency inherent in scheduled batch processes and the coupling complexity of direct API integration at scale.</p>
+
+              <ul class="course-list">
+                <li>Hub-and-Spoke — all source systems integrate directly with the MDM platform; simple to govern but creates a bottleneck as integration volume grows</li>
+                <li>Integration Bus — source systems connect to a central bus that routes data to MDM and other consumers; more scalable, separates integration logic from MDM processing</li>
+                <li>Event Streaming — source systems publish events to a streaming platform and MDM subscribes to relevant streams; highest scalability and lowest latency, most complex to implement</li>
+              </ul>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +68,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Pattern selection should reflect current integration volume and the real-time requirements of AI applications. Starting with hub-and-spoke and evolving toward event streaming as AI latency requirements increase is a valid architectural journey — attempting to implement event streaming before the organization has the engineering maturity to operate it reliably creates more risk than it eliminates.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-integration-patterns.png" alt="Three MDM integration architecture pattern diagrams: Hub-and-Spoke with all source systems connecting directly to the MDM hub; Integration Bus with a central bus routing data between sources, MDM, and consumers; and Event Streaming with source systems publishing to a streaming platform that MDM subscribes to. Each pattern is labeled with its scalability profile and AI latency suitability." class="course-visual-image">
+                <figcaption>Pattern selection should reflect current integration volume and the real-time requirements of AI applications.</figcaption>
+              </div>
+
+              <!-- Section 2 — Data Lineage in the Integration Layer -->
+              <p class="course-overview-subtitle">Data Lineage in the Integration Layer</p>
+
+              <p>Data lineage in the MDM integration layer serves two distinct purposes. The first is operational governance — the ability to trace how any golden record was constructed, which source records contributed to it, and which survivorship rules were applied. The second is AI accountability — the ability to trace any AI model's outputs back to the specific training data version, and that training data version back to the governed golden records and source systems that produced it.</p>
+
+              <p>As AI regulation and model explainability requirements grow, this end-to-end lineage from source record to AI output is becoming a governance requirement rather than a best practice. Organizations that build lineage tracking into their MDM integration architecture from the beginning are significantly better positioned for AI accountability requirements than those that attempt to reconstruct lineage after models are already in production.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +92,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Build lineage tracking into MDM integration architecture from day one — not as a retrofit. Every integration event, matching decision, survivorship rule application, and golden record export should be logged with enough metadata to reconstruct the full chain from source record to AI model output. Retrofitting lineage onto an existing pipeline is expensive and almost never complete.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-data-lineage.png" alt="A lineage diagram following a single customer entity from its origin as a raw CRM record through integration capture, MDM matching and survivorship, golden record creation with timestamps and source attribution, export to an AI training dataset with quality certification status, and finally AI model training with the model version linked to the training data version." class="course-visual-image">
+                <figcaption>Data lineage connects every AI model output back to the source records that shaped it.</figcaption>
+              </div>
+
+              <!-- Section 3 — Integration Testing for AI Data Pipelines -->
+              <p class="course-overview-subtitle">Integration Testing for AI Data Pipelines</p>
+
+              <p>Integration pipelines that deliver governed data to AI systems are as critical to AI program quality as the models themselves — and they deserve the same testing discipline. Unit tests verify that individual integration connections are delivering data completely and in the expected format. Quality tests verify end-to-end that the golden records arriving in AI training environments meet the quality thresholds established during data quality assessment.</p>
+
+              <p>Regression tests run automatically after any change to matching rules, survivorship configurations, or integration logic — confirming that the change has not inadvertently degraded the quality of AI feature inputs below the baselines the model was designed to depend on.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +116,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>MDM-to-AI integration pipelines require testing discipline as rigorous as the AI models themselves. Organizations that treat the data pipeline as background plumbing consistently experience more AI quality failures in production than those that treat integration testing as a first-class engineering discipline. A model is only as reliable as the pipeline that feeds it.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-integration-testing.png" alt="A testing checklist in three phases: Phase 1 — Unit Tests checking individual connections for completeness, format conformance, and delivery reliability; Phase 2 — Quality Tests confirming golden records delivered to AI pipelines meet defined quality thresholds; Phase 3 — Regression Tests running automatically after any rule or configuration change to confirm AI feature quality has not degraded below established baselines." class="course-visual-image">
+                <figcaption>MDM-to-AI integration pipelines require testing discipline as rigorous as the AI models themselves.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Integration is not infrastructure — it is the data supply chain that determines what MDM governance can actually govern and what AI systems can actually trust.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m5-integration-summary.png" alt="A flow diagram showing the complete MDM integration landscape: source systems on the left feeding raw data through batch, event-driven, and API integration patterns into the MDM platform at center, which applies matching, survivorship, and quality rules to create golden records, which then flow to operational systems, analytics platforms, AI training pipelines, and real-time AI inference services on the right. A lineage layer beneath the entire flow tracks provenance from source to AI output." class="course-visual-image">
+                <figcaption>Integration is not infrastructure. It is the data supply chain that determines what MDM governance can actually govern — and what AI systems can actually trust.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
