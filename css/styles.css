@@ -297,6 +297,7 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  min-width: 0;
 }
 
 /* HEADER */
@@ -373,6 +374,7 @@ body {
   flex: 1;
   overflow-y: auto;
   padding: 14px 24px 28px;
+  min-width: 0;
   background-image:
     radial-gradient(circle at 95% 8%, rgba(251, 191, 36, 0.18) 0, rgba(251, 191, 36, 0) 220px),
     radial-gradient(circle at 8% 92%, rgba(239, 68, 68, 0.12) 0, rgba(239, 68, 68, 0) 260px);
@@ -406,9 +408,44 @@ body {
   margin-bottom: 12px;
 }
 
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+iframe {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  display: block;
+  border: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* FIGURES AND CAPTIONS */
 figure {
   margin: 0;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 figcaption {
@@ -450,15 +487,9 @@ figcaption {
   font-style: italic;
   line-height: 1.6;
   color: var(--text-light);
-  white-space: nowrap;
+  white-space: normal;
   width: 100%;
   box-sizing: border-box;
-}
-
-@media (max-width: 1024px) {
-  .introduction-caption {
-    white-space: normal;
-  }
 }
 
 .course-overview {
@@ -691,6 +722,7 @@ figcaption {
 .module-content {
   display: grid;
   gap: 22px;
+  min-width: 0;
 }
 
 /* LESSON LAYOUT */
@@ -707,6 +739,7 @@ figcaption {
   border: 1px solid var(--border-color);
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  max-width: 100%;
 }
 
 .video-placeholder {
