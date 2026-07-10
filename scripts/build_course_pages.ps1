@@ -421,9 +421,8 @@ foreach ($module in $courseModules) {
   }
 }
 
-New-CompletionPage -File 'course-completion.html' -Title 'Course Completion' -BodyText 'Placeholder for the end-of-course completion page.' -BackFile 'lessons/module-11-5-long-term-operating-model.html' -NextFile 'final-knowledge-check.html'
-New-CompletionPage -File 'final-knowledge-check.html' -Title 'Final Knowledge Check' -BodyText 'Placeholder for the final knowledge check page.' -BackFile 'course-completion.html' -NextFile 'certificate-of-completion.html'
-New-CompletionPage -File 'certificate-of-completion.html' -Title 'Certificate of Completion' -BodyText 'Placeholder for the certificate page.' -BackFile 'final-knowledge-check.html' -NextFile 'index.html'$repo = 'c:\Users\L570\Desktop\OpenDQ'
+New-CompletionPage -File 'course-completion.html' -Title 'Course Completion' -BodyText 'Placeholder for the end-of-course completion page.' -BackFile 'lessons/module-11-5-long-term-operating-model.html' -NextFile 'certificate-of-completion.html'
+New-CompletionPage -File 'certificate-of-completion.html' -Title 'Certificate of Completion' -BodyText 'Placeholder for the certificate page.' -BackFile 'course-completion.html' -NextFile 'index.html'$repo = 'c:\Users\L570\Desktop\OpenDQ'
 $lessons = Join-Path $repo 'lessons'
 $blankVideo = 'about:blank'
 
@@ -580,7 +579,6 @@ $completion = [pscustomobject]@{
   IntroFile = 'course-completion.html'
   IntroTitle = 'Course Completion'
   Pages = @(
-    [pscustomobject]@{ File = 'final-knowledge-check.html'; Title = 'Final Knowledge Check' },
     [pscustomobject]@{ File = 'certificate-of-completion.html'; Title = 'Certificate of Completion' }
   )
 }

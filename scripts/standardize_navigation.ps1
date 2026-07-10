@@ -150,14 +150,12 @@ $completionByContext = @{
   lessons = [pscustomobject]@{
     IntroFile = 'course-completion.html'
     Pages = @(
-      [pscustomobject]@{ File = 'final-knowledge-check.html'; Title = 'Final Knowledge Check' },
       [pscustomobject]@{ File = 'certificate-of-completion.html'; Title = 'Certificate of Completion' }
     )
   }
   root = [pscustomobject]@{
     IntroFile = 'course-completion.html'
     Pages = @(
-      [pscustomobject]@{ File = 'final-knowledge-check.html'; Title = 'Final Knowledge Check' },
       [pscustomobject]@{ File = 'certificate-of-completion.html'; Title = 'Certificate of Completion' }
     )
   }
@@ -301,7 +299,7 @@ $indexPath = Join-Path $repo 'index.html'
 $indexSidebar = New-Sidebar -Context 'root' -CurrentFile 'index.html' -IsDashboard:$true
 Replace-Sidebar -FilePath $indexPath -SidebarHtml $indexSidebar
 
-$rootCompletionPages = @('course-completion.html','final-knowledge-check.html','certificate-of-completion.html')
+$rootCompletionPages = @('course-completion.html','certificate-of-completion.html')
 foreach ($name in $rootCompletionPages) {
   $path = Join-Path $repo $name
   if (Test-Path $path) {
