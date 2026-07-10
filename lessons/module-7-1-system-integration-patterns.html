@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: System Integration Patterns - Master Data Management</title>
+  <title>System Integration Patterns - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-1-system-integration-patterns.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: System Integration Patterns</h1>
+        <h1 class="header-title">System Integration Patterns</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 2 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">System Integration Patterns</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/66bo8QnJbPh"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How integration patterns evolve as MDM programs mature, why pattern choice affects data lineage and AI auditability, and how governance standards should apply consistently across every pattern an organization runs simultaneously.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,19 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Integration Pattern Evolution in MDM Programs -->
+              <p class="course-overview-subtitle">Integration Pattern Evolution in MDM Programs</p>
+
+              <p>Integration architecture in MDM programs almost always evolves over time, and programs that design their initial integration architecture without considering where it needs to go tend to face costly re-architecture as the program scales. A common pattern is to start with hub-and-spoke for simplicity and governance consistency, introduce an ESB layer as transformation complexity grows, and add event streaming capability when real-time AI use cases emerge.</p>
+
+              <p>Organizations that anticipate this evolution and select integration middleware that supports multiple patterns from a single platform — rather than deploying separate tools for each pattern type — significantly reduce the re-architecture burden as they mature.</p>
+
+              <ul class="course-list">
+                <li>Early MDM — two to four source systems, point-to-point or simple hub-and-spoke, batch-only integration</li>
+                <li>Expanding MDM — eight to twelve systems, ESB adopted for transformation complexity, first event-driven integrations for critical real-time use cases</li>
+                <li>Mature MDM with AI — full event streaming for AI inference use cases, ESB retained for complex batch workloads, hub-and-spoke for simpler consumer integrations</li>
+              </ul>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +68,44 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Design integration architecture with evolution in mind — the pattern that starts the program rarely ends it. When selecting integration middleware, evaluate whether the platform supports hub-and-spoke, ESB, and event streaming from a single toolset, so the transition between patterns as the program matures is a configuration change rather than a platform replacement.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-pattern-evolution.png" alt="A three-phase evolution timeline showing Early MDM with simple hub-and-spoke and batch-only integration, Expanding MDM with ESB adoption and first event-driven integrations, and Mature MDM with AI using full event streaming for AI inference alongside ESB for batch workloads and hub-and-spoke for simpler consumers." class="course-visual-image">
+                <figcaption>Integration architecture should be designed with evolution in mind — the pattern that starts the program rarely ends it.</figcaption>
+              </div>
+
+              <!-- Section 2 — Integration Patterns and Data Lineage -->
+              <p class="course-overview-subtitle">Integration Patterns and Data Lineage</p>
+
+              <p>Data lineage — the ability to trace a golden record's field values back to their source records and the integration events that produced them — is significantly affected by integration pattern choice. Hub-and-spoke architectures produce relatively straightforward lineage because data flows through a single, centrally managed path. Event streaming architectures produce more complex lineage because the same entity may appear in multiple event versions in the stream, each representing a different point-in-time state.</p>
+
+              <p>AI audit requirements — particularly the need to explain which training data a model was built on and trace model outputs back to specific data inputs — require lineage design that accounts for the integration pattern's complexity.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>More complex integration patterns require more deliberate lineage design — AI auditability depends on it. An event streaming architecture that lacks explicit lineage annotation at each event boundary makes it extremely difficult to reconstruct which version of a source record contributed to a specific golden record at training time — which is exactly the information AI audit requirements ask for.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-pattern-lineage.png" alt="A lineage tracing exercise for a customer golden record used in an AI model. Hub-and-spoke shows straightforward lineage through a single managed path. Event streaming shows more complex lineage with multiple event versions representing different point-in-time states of the same entity. Both architectures are shown with a lineage annotation layer capturing the integration pattern used." class="course-visual-image">
+                <figcaption>More complex integration patterns require more deliberate lineage design — AI auditability depends on it.</figcaption>
+              </div>
+
+              <!-- Section 3 — Integration Governance Across Patterns -->
+              <p class="course-overview-subtitle">Integration Governance Across Patterns</p>
+
+              <p>When organizations run multiple integration patterns simultaneously — as most mature MDM programs do — a common governance failure is applying different standards to different patterns. Batch integrations get rigorous quality checks; event streaming integrations are treated as infrastructure and miss the same governance oversight.</p>
+
+              <p>Establishing a consistent integration governance standard that applies regardless of pattern — with pattern-specific implementation details where necessary — prevents the gaps that allow ungoverned data to reach AI systems through a pathway that was overlooked in the governance design.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +116,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Governance requirements apply to every integration pattern — implementation varies, the standard does not. Every integration connection, regardless of pattern, requires a schema change approval process, data quality checks at the integration boundary, lineage metadata capture, AI pipeline delivery confirmation, and SLA monitoring. Event streaming adds event ordering guarantees and consumer lag monitoring on top of these baseline requirements.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-integration-governance-patterns.png" alt="A governance checklist applied consistently across three integration pattern types showing common governance requirements — schema change approval, data quality checks, lineage metadata capture, AI pipeline delivery confirmation, and SLA monitoring — with event streaming adding event ordering guarantees and consumer lag monitoring as pattern-specific additions." class="course-visual-image">
+                <figcaption>Governance requirements apply to every integration pattern — implementation varies, the standard does not.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Most mature MDM programs run more than one integration pattern simultaneously — the right mix depends on scale, complexity, and the real-time requirements of AI use cases.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-patterns-summary.png" alt="Four integration pattern cards — Point-to-Point, Hub-and-Spoke, ESB, and Event Streaming — each showing a topology icon, a one-line summary, a best-fit use case, and an AI latency support rating, allowing organizations to quickly assess which pattern fits each integration requirement." class="course-visual-image">
+                <figcaption>The right pattern depends on scale, complexity, and the real-time requirements of AI use cases. Most mature programs use more than one.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

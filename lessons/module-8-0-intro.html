@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 8: Introduction to Module - Master Data Management</title>
+  <title>MDM Implementation Roadmap - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-8" data-page-id="module-8-0-intro.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 8: Introduction to Module</h1>
+        <h1 class="header-title">MDM Implementation Roadmap</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Introduction to Module</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/rxN1VfMvhj0"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: An introduction to Module 8 — why implementation is where MDM programs most commonly break down, why AI readiness must be a planned deliverable rather than an assumed outcome, and what the five-stage implementation journey covers.</figcaption>
             </figure>
           </div>
 
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Why Implementation Is Where MDM Programs Most Commonly Struggle -->
+              <p class="course-overview-subtitle">Why Implementation Is Where MDM Programs Most Commonly Struggle</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>Implementation is where the optimism of strategy meets the complexity of organizational reality. Data that looked clean in architecture diagrams turns out to be messier than profiling suggested. Business users who endorsed the governance framework in steering committee meetings resist the stewardship responsibilities it creates for them. Migration timelines estimated in weeks extend into months.</p>
+
+              <p>AI readiness — assumed to follow naturally from MDM implementation — never gets formally defined, measured, or delivered because nobody built it into the implementation plan as an explicit deliverable. Each of these failures is predictable, documented across the MDM industry, and preventable with the implementation disciplines covered in this module.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,14 +62,52 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Implementation failures are predictable — which means they are preventable. Scope creep in Phase 1, adoption failure at go-live, migration underestimation, change resistance from business users, and AI readiness that was assumed rather than planned are the five failure modes that appear most consistently across MDM programs. This module addresses each of them directly.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-implementation-struggle.png" alt="A program lifecycle bar showing common failure points highlighted in red: scope creep in Phase 1, adoption failure at go-live, migration underestimation causing delays, change resistance from business users, and AI readiness never formally achieved because it was assumed rather than planned." class="course-visual-image">
+                <figcaption>Implementation failures are predictable — which means they are preventable with the right disciplines.</figcaption>
+              </div>
+
+              <!-- Section 2 — AI Readiness as an Implementation Deliverable -->
+              <p class="course-overview-subtitle">AI Readiness as an Implementation Deliverable</p>
+
+              <p>One of the most important implementation discipline shifts for organizations with active AI programs is treating AI readiness as an explicit, planned deliverable at every phase — not as an assumed consequence of good MDM implementation. This means defining AI readiness milestones at the start of each phase, building AI pipeline connections and certification workflows into the implementation plan alongside platform configuration and data migration, and testing AI readiness as a formal go-live criterion.</p>
+
+              <p>An implementation plan that lists AI readiness as an expected outcome without specifying how it will be measured, who is responsible for it, and what it takes to achieve it will almost never produce it.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>AI readiness that isn't planned as a deliverable almost never gets delivered. Each implementation phase should include explicit AI readiness milestones: quality thresholds defined and tested, certification workflow built and operational, AI pipeline connections tested end-to-end. These are not post-go-live activities — they are go-live criteria that the AI team and the MDM program team agree on before Phase 1 begins.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-ai-readiness-deliverable.png" alt="Two implementation plans side by side. Plan A has no explicit AI readiness milestones — phases cover platform configuration, data migration, and go-live with AI readiness noted only as an expected outcome, resulting in AI teams unable to use MDM outputs. Plan B includes explicit AI readiness milestones at each phase — quality thresholds defined, certification workflow built, AI pipeline connections tested — resulting in certified, pipeline-connected governed data at the end of Phase 1." class="course-visual-image">
+                <figcaption>AI readiness that isn't planned as a deliverable almost never gets delivered.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Module 8 covers implementation as a five-stage discipline — each stage addressing one of the most common failure modes MDM programs face on the path from strategy to organizational capability.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-module-overview.png" alt="A five-stage horizontal flow showing the Module 8 implementation journey: Implementation Phases — the structured sequence; Pilot and Rollout — proving the approach before scaling; Migration — moving from ungoverned legacy data to governed master data; Adoption — getting the business to use and trust governed data; Change Management — making organizational changes stick. A banner beneath reads: AI readiness is a planned deliverable at every stage — not an assumed outcome." class="course-visual-image">
+                <figcaption>Implementation is the discipline that turns MDM ambition into organizational capability.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
 
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
-          <a href="module-7-5-cross-system-consistency.html" class="btn btn-primary">Back</a>
+          <a href="module-7-6-recap.html" class="btn btn-primary">Back</a>
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
           <a href="module-8-1-implementation-phases.html" class="btn btn-accent">Next</a>
         </div>

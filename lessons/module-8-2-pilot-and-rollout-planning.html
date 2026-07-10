@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 8: Pilot and Rollout Planning - Master Data Management</title>
+  <title>Pilot and Rollout Planning - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-8" data-page-id="module-8-2-pilot-and-rollout-planning.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 8: Pilot and Rollout Planning</h1>
+        <h1 class="header-title">Pilot and Rollout Planning</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Pilot and Rollout Planning</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/p0MJfapT0km"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to select a pilot domain objectively rather than politically, and why the pilot is the only controlled opportunity to validate the MDM-to-AI architecture before it is scaled across the program.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Pilot Domain Selection in Practice -->
+              <p class="course-overview-subtitle">Pilot Domain Selection in Practice</p>
+
+              <p>Pilot domain selection is frequently influenced by organizational politics rather than objective criteria — the domain whose business owner is most enthusiastic, or the domain the implementation team finds most technically interesting, ends up as the pilot rather than the one that would produce the most compelling evidence for Phase 2 investment.</p>
+
+              <p>A scoring model that evaluates candidates against consistent, documented criteria produces a selection that is both more likely to succeed and more defensible to stakeholders who expected their domain to be chosen first.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +62,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Run a documented scoring exercise before finalizing the pilot domain — even if the answer seems obvious. Score each candidate across business pain intensity, AI dependency urgency, data complexity, and stakeholder readiness. Documenting the scores and selection rationale gives you a defensible answer for every domain owner who asks why theirs wasn't chosen first, and produces a reusable sequencing framework for every domain decision that follows.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-pilot-domain-selection.png" alt="A domain selection scoring model showing five candidate domains scored across four criteria: business pain intensity, AI dependency urgency, data complexity, and stakeholder readiness. Scores are weighted and summed. The Customer domain emerges as the recommended pilot choice with the highest business pain, high AI dependency, manageable complexity, and strong stakeholder readiness. The Supplier domain is flagged as a strong Wave 1 rollout candidate." class="course-visual-image">
+                <figcaption>A scoring model makes pilot domain selection defensible — and separates it from organizational politics.</figcaption>
+              </div>
+
+              <!-- Section 2 — The Pilot as an AI Architecture Test -->
+              <p class="course-overview-subtitle">The Pilot as an AI Architecture Test</p>
+
+              <p>The pilot is the ideal — and often the only — controlled opportunity to validate the MDM-to-AI architecture end-to-end before it is scaled across multiple domains and AI use cases. Architecture gaps discovered in the pilot can be addressed in a controlled environment with limited blast radius.</p>
+
+              <p>The same gaps discovered mid-rollout, when multiple AI teams are depending on the pipeline, require program-wide fixes that disrupt active AI development. Common gaps surfaced during pilots include a feature store that doesn't receive provenance metadata, a certification workflow that produces records in the wrong format for the AI model registry, and a drift monitoring connection that doesn't align with the MDM platform's quality event schema.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Do not skip end-to-end AI pipeline testing in the pilot on the assumption that it can be validated during rollout. Architecture gaps found during a pilot affect one domain and one AI use case — they can be fixed in weeks. The same gaps found mid-rollout affect every domain and AI team currently depending on the pipeline, and fixing them requires a program-wide pause. The pilot is the only moment when the cost of finding a gap is low.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-pilot-ai-architecture.png" alt="An AI architecture validation checklist integrated into the pilot plan showing five validation items: MDM-to-feature-store pipeline end-to-end test complete; golden record version metadata flowing through to training dataset; AI readiness certification workflow producing correctly structured certification records; data drift monitoring connected to pilot domain quality monitoring; and AI model performance comparison documented." class="course-visual-image">
+                <figcaption>The pilot is the last controlled environment in which to discover AI architecture gaps before rollout scales them.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The pilot proves what works. The rollout scales what the pilot proved — not what the architecture assumed.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-pilot-summary.png" alt="A three-panel diagram showing the scaling journey. Left panel — Pilot: one domain, controlled scope, specific learning objectives, AI pipeline validation, and documented outcomes. Center — Gate Review: success criteria met, learnings documented, rollout plan updated. Right panel — Rollout: sequential waves each incorporating pilot learnings and unlocking planned AI use cases." class="course-visual-image">
+                <figcaption>Scale what the pilot proved — not what the architecture assumed.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

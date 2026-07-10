@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: Data Distribution Approaches - Master Data Management</title>
+  <title>Data Distribution Approaches - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-4-data-distribution-approaches.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: Data Distribution Approaches</h1>
+        <h1 class="header-title">Data Distribution Approaches</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Data Distribution Approaches</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/paNsPvVyvjl"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How data virtualization works as a distribution alternative, why data residency requirements must be built into distribution architecture from the start, and how to match distribution approaches to different consumer types and AI use cases.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Data Virtualization as a Distribution Alternative -->
+              <p class="course-overview-subtitle">Data Virtualization as a Distribution Alternative</p>
+
+              <p>Data virtualization is a distribution alternative that deserves consideration alongside physical distribution approaches. Rather than physically moving or copying governed data to consumer locations, virtualization creates a logical access layer that assembles governed entity data from the MDM platform and other sources at query time.</p>
+
+              <p>For AI programs with complex cross-entity data requirements — models that need customer, product, and transaction data assembled into a single training record — virtualization can significantly simplify the distribution architecture by eliminating the need to maintain synchronized copies of data across multiple stores. The tradeoff is query-time performance: assembling data at query time is slower than reading from a pre-materialized copy, which makes virtualization better suited to AI training workloads than to real-time inference where response time is critical.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,20 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Data virtualization eliminates distribution latency for consumers that can tolerate real-time assembly — at the cost of query-time performance. This makes it well-suited for AI training pipelines that run overnight or on a scheduled cadence, where assembly time is acceptable. It is not appropriate for real-time AI inference use cases where a model needs a governed entity record returned in milliseconds.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m7-data-virtualization.png" alt="A data virtualization layer sitting above the MDM platform and multiple source systems. Consumer systems including an AI feature store query the virtualization layer using standard SQL or API calls. The virtualization layer queries the MDM platform and relevant source systems in real time, assembles the response, and returns it to the consumer without physically moving or copying data." class="course-visual-image">
+                <figcaption>Data virtualization eliminates distribution latency for consumers that can tolerate real-time assembly — at the cost of query-time performance.</figcaption>
               </div>
+
+              <!-- Section 2 — Distribution and Data Residency Requirements -->
+              <p class="course-overview-subtitle">Distribution and Data Residency Requirements</p>
+
+              <p>Data residency and data sovereignty requirements increasingly constrain MDM distribution architecture, particularly for global organizations with AI programs that span multiple jurisdictions. Customer records governed by GDPR in Europe may not be transferable to AI training environments in other regions without specific legal basis. Financial records subject to local sovereignty requirements may need to remain within national borders.</p>
+
+              <p>Distribution architecture that ignores these constraints produces both compliance exposure and AI program delays when regulators or legal teams require distribution patterns to be redesigned after implementation. Building residency constraints into the distribution architecture design from the start — including their implications for AI training dataset scope and geographic access controls — is significantly less costly than retrofitting them.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Data residency requirements constrain distribution architecture — design for them before building the distribution layer. An AI training pipeline that was built assuming global data access may need to be redesigned from scratch when legal or compliance teams identify residency violations. That redesign is far more expensive than including residency constraints in the initial distribution architecture review.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-distribution-residency.png" alt="A global enterprise MDM architecture showing golden records distributed to regional data stores in Europe, North America, and Asia-Pacific, with data residency rules annotated for each region — EU customer records cannot leave the EU, APAC records are subject to local sovereignty requirements, North America records are freely distributable within the region. AI training environments in each region receive only the records they are permitted to access." class="course-visual-image">
+                <figcaption>Data residency requirements constrain distribution architecture — design for them before building the distribution layer.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Distribution is not one decision — it is a set of decisions made separately for each consumer type and use case, with AI training and AI inference typically requiring different approaches.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-distribution-summary.png" alt="A consumer type matrix showing five distribution approaches — push, pull API, file export, database replication, and API gateway — mapped against six consumer types with a suitability rating for each combination. AI training and AI inference are highlighted with their recommended distribution approaches, showing that AI training favors bulk export and replication while AI inference favors API gateway and push patterns." class="course-visual-image">
+                <figcaption>Distribution is not one decision — it is a set of decisions made separately for each consumer type and use case.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module Recap - Master Data Management</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body data-module-id="module-7" data-page-id="module-7-6-recap.html">
+  <div class="layout">
+    <div id="sidebar-container"></div>
+
+    <div class="main-content">
+      <header class="header">
+        <h1 class="header-title">Module Recap</h1>
+        <div class="header-actions">
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 7 of 7</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="module-content">
+          <div class="card introduction-card">
+            <figure class="introduction-figure">
+              <div class="introduction-video-frame">
+                <iframe
+                  class="introduction-video"
+                  src="https://share.descript.com/embed/X18M3LhnpWB"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
+              <figcaption class="introduction-caption">Watch: A recap of Module 7 — how every integration decision shapes what AI systems can do with governed data, the specific AI integration thread running through each topic, and a preview of the implementation focus in Module 8.</figcaption>
+            </figure>
+          </div>
+
+          <section class="course-overview">
+            <h2 class="course-overview-title course-title-with-icon">
+              <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M12 3l8 4v6c0 5-3.5 9.5-8 11-4.5-1.5-8-6-8-11V7l8-4z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              Module support notes
+            </h2>
+
+            <div class="course-overview-body">
+
+              <!-- Section 1 — What This Module Covered -->
+              <p class="course-overview-subtitle">What This Module Covered</p>
+
+              <p>The integration decisions covered in this module are the least visible component of an MDM program — and among the most consequential for AI outcomes. An organization can have excellent governance, well-configured matching and survivorship, strong policies, and rigorous stewardship — and still deliver stale, inconsistent, or incompletely distributed data to AI systems if integration architecture decisions were made without AI use case requirements in mind.</p>
+
+              <p>The integration layer is where MDM governance either reaches AI programs or fails to — and the architectural choices that determine that reach are made early, locked in over time, and expensive to change once AI programs depend on them.</p>
+
+              <ul class="course-list">
+                <li>System Integration Patterns — four patterns each with different scalability, latency, and AI suitability profiles; most mature programs combine patterns rather than committing to one</li>
+                <li>APIs and Event-Driven Architectures — MDM APIs and event streams are the technologies that deliver governed data to AI inference services in real time; design them explicitly for AI consumers</li>
+                <li>Batch vs. Real-Time Synchronization — match synchronization frequency to AI use case latency requirements; batch for scheduled AI workloads, real-time for decisions where stale data has immediate consequences</li>
+                <li>Data Distribution Approaches — choose distribution approach separately for each consumer type; versioned file export for AI training, API gateway for inference, database replication for analytics</li>
+                <li>Cross-System Consistency — eventual consistency requires versioned golden records, monitoring, and reconciliation; version-aware AI inference prevents models from operating on entity states outside their training range</li>
+              </ul>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-recap-module-summary.png" alt="A one-page summary with five rows, one per module topic: System Integration Patterns, APIs and Event-Driven Architectures, Batch vs. Real-Time Synchronization, Data Distribution Approaches, and Cross-System Consistency, each with a single-sentence summary and an icon." class="course-visual-image">
+                <figcaption>Integration is the data supply chain that determines what MDM governance can actually deliver to AI programs — design it with AI requirements as a first-class concern.</figcaption>
+              </div>
+
+              <!-- Section 2 — The AI Integration Thread Through Module 7 -->
+              <p class="course-overview-subtitle">The AI Integration Thread Through Module 7</p>
+
+              <p>The AI integration thread through Module 7 is more specific and more technical than the AI threads in previous modules — because integration architecture decisions are made at a level of technical detail where the AI consequences are most directly felt. The event streaming pattern that enables real-time fraud detection, the API versioning that stabilizes AI model development, the synchronization frequency that determines whether an inference service sees today's customer record or yesterday's, the distribution approach that produces reproducible training datasets — these are the specific decisions that determine whether MDM governance translates into AI capability.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Integration architecture is AI architecture — every decision in this module shapes what AI systems can do with governed data. Integration Patterns determine AI inference latency support; APIs and Events provide provenance-rich data for AI consumers; Synchronization frequency matches AI decision cycles; Distribution approaches produce training-reproducible datasets; Consistency mechanisms prevent out-of-range AI decisions. These are not background plumbing decisions — they are AI program design decisions.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-recap-ai-thread.png" alt="A thread connecting all five module topics with their specific AI integration contribution: Integration Patterns enabling event streaming for real-time AI inference; APIs and Events providing versioned provenance-rich APIs for AI consumers; Synchronization matching latency to AI decision cycles; Distribution producing versioned exports for training and API gateway for inference; Consistency enabling version-aware inference to prevent out-of-range decisions." class="course-visual-image">
+                <figcaption>Integration architecture is AI architecture — every decision in this module shapes what AI systems can do with governed data.</figcaption>
+              </div>
+
+              <!-- Section 3 — Preparing for Module 8 -->
+              <p class="course-overview-subtitle">Preparing for Module 8</p>
+
+              <p>Module 8 addresses the implementation challenge that all prior modules have been building toward — how organizations translate strategy, governance design, technology selection, and integration architecture into a working MDM program that the business actually uses.</p>
+
+              <p>Every concept covered in Modules 3 through 7 becomes an implementation deliverable in Module 8 — the roadmap phases sequence them, the pilot approach tests them, the migration plan addresses the legacy data they need to govern, the adoption plan gets the business to trust them, and the change management discipline ensures the organizational changes they require actually take hold.</p>
+
+              <div class="course-callout course-callout-tip">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M9 18h6"></path>
+                    <path d="M10 22h4"></path>
+                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
+                  </svg>
+                  Tip
+                </p>
+                <p>As you move into Module 8, carry the integration architecture decisions from this module into the implementation sequencing conversations. Integration is not a separate workstream — it is a dependency that shapes which implementation phases can proceed and in what order. A pilot that tests governance and matching without validating the integration layer has not tested whether the program can actually deliver governed data where it needs to go.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-recap-module8-preview.png" alt="A preview layout with five Module 8 topic tiles: Implementation Phases, Pilot and Rollout Planning, Migration Considerations, Adoption Planning, and Change Management, each with a brief description of how it translates prior module concepts into practical implementation deliverables." class="course-visual-image">
+                <figcaption>Module 8 is where everything covered so far becomes a practical implementation plan.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Every layer of the integration stack shapes what reaches AI systems — and all five layers must work together for MDM governance to translate into AI capability.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-recap-infographic.png" alt="A complete integration flow diagram with five labeled layers stacked from bottom to top: Integration Patterns as the architectural topology, APIs and Events as the connection technologies, Synchronization as timing and frequency, Distribution as consumer-specific delivery, and Consistency as ongoing alignment. All layers feed into consumer icons on the right including operational systems, analytics platforms, AI training pipeline, and AI inference service." class="course-visual-image">
+                <figcaption>Every layer of the integration stack shapes what reaches AI systems — design each layer with AI requirements as the primary constraint.</figcaption>
+              </div>
+
+            </div>
+          </section>
+        </div>
+
+        <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
+          <a href="module-7-5-cross-system-consistency.html" class="btn btn-primary">Back</a>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 7 of 7</span>
+          <a href="module-8-0-intro.html" class="btn btn-accent">Next</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/sidebar-loader.js"></script>
+</body>
+</html>

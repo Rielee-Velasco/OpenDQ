@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 9: Monitoring and Issue Resolution - Master Data Management</title>
+  <title>Monitoring and Issue Resolution - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-9" data-page-id="module-9-3-monitoring-and-issue-resolution.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 9: Monitoring and Issue Resolution</h1>
+        <h1 class="header-title">Monitoring and Issue Resolution</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Monitoring and Issue Resolution</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/5IbgAka6Dmz"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How threshold monitoring and anomaly detection work together as complementary approaches, and why building a resolution knowledge base is the practice that turns operational experience into institutional memory.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Anomaly Detection vs. Threshold Monitoring -->
+              <p class="course-overview-subtitle">Anomaly Detection vs. Threshold Monitoring</p>
+
+              <p>Threshold monitoring and anomaly detection are complementary rather than alternative monitoring approaches, and mature MDM operations programs use both simultaneously. Threshold monitoring provides clear, deterministic alerts when a quality or performance metric crosses a defined boundary — simple to configure, easy to act on, and directly tied to governance standards. Anomaly detection identifies statistically unusual patterns in metric behavior that may not yet have crossed a threshold but represent a meaningful departure from normal variation.</p>
+
+              <p>For AI pipeline monitoring specifically, anomaly detection is particularly valuable for feature distribution drift, where gradual shifts in the statistical properties of model inputs can degrade model performance well before any individual quality metric crosses its threshold.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Threshold monitoring catches failures. Anomaly detection catches the conditions that precede them. Used together, threshold monitoring ensures no breach goes undetected, while anomaly detection provides earlier warning of developing problems — often detecting unusual patterns three to four weeks before a metric reaches its threshold boundary. For AI programs, that early warning is the difference between a proactive data quality intervention and an emergency retraining cycle.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-anomaly-vs-threshold.png" alt="A quality trend chart showing both monitoring approaches in action. Threshold monitoring shows a horizontal line at the minimum quality threshold — the metric stays above it for twelve weeks, then drops below and triggers an alert. Anomaly detection shows a statistical model of normal variation that detects the metric declining unusually rapidly for three weeks before it reaches the threshold, triggering an earlier warning." class="course-visual-image">
+                <figcaption>Threshold monitoring catches failures. Anomaly detection catches the conditions that precede them.</figcaption>
+              </div>
+
+              <!-- Section 2 — Building an Issue Resolution Knowledge Base -->
+              <p class="course-overview-subtitle">Building an Issue Resolution Knowledge Base</p>
+
+              <p>Every resolved exception and investigated issue contains information that makes the next similar problem faster to resolve — if that information is captured and made searchable. A resolution knowledge base accumulates documented root cause analyses, resolution steps, prevention controls implemented, and outcomes — including AI pipeline impacts and remediation actions.</p>
+
+              <p>Over time, the knowledge base also reveals systemic patterns that individual exception records obscure — recurring root causes that warrant a governance policy change, source systems that disproportionately generate certain exception types, or AI pipelines that are particularly sensitive to specific quality dimension changes.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +86,22 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Make the resolution knowledge base searchable from the exception workflow interface — not a separate system stewards have to remember to consult. When a steward receives a new exception, the workflow should automatically surface the three most similar previous cases from the knowledge base. That single design decision reduces investigation time significantly and prevents experienced stewards from re-solving problems their predecessors already solved.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                  </svg>
-                  Warning
-                </p>
-                <p>Add a warning placeholder here for common risks.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m9-resolution-knowledge-base.png" alt="A knowledge base interface showing categorized resolution records with fields for exception type, root cause identified, resolution steps taken, prevention control implemented, recurrence after resolution, and AI pipelines affected with remediation actions. A search interface allows stewards to find previous resolutions for similar issues by exception type or root cause category." class="course-visual-image">
+                <figcaption>A resolution knowledge base is what prevents experienced stewards from re-solving problems their predecessors already solved.</figcaption>
               </div>
+
+              <!-- Page Infographic -->
+              <p>Early detection and structured resolution are what keep the gap between problem start and problem fix measured in days rather than months — protecting the AI systems that depend on continuous data quality.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-monitoring-summary.png" alt="A three-layer monitoring architecture diagram showing alert routing rules and resolution track indicators at each layer. AI pipeline impact is highlighted as the primary escalation trigger at every layer, showing how monitoring architecture is designed around the consequence of quality failures for AI system reliability." class="course-visual-image">
+                <figcaption>Early detection and structured resolution are what keep the gap between problem start and problem fix measured in days, not months.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 11: Introduction to Module - Master Data Management</title>
+  <title>Sustaining MDM - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-11" data-page-id="module-11-0-intro.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 11: Introduction to Module</h1>
+        <h1 class="header-title">Sustaining MDM</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Introduction to Module</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/EebelaDYZ1O"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: An introduction to Module 11 — why sustainability is the hardest MDM discipline, why the AI portfolio's growth makes MDM sustainability an AI reliability concern, and what the five sustainability disciplines cover.</figcaption>
             </figure>
           </div>
 
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Why Sustainability Is the Hardest MDM Discipline -->
+              <p class="course-overview-subtitle">Why Sustainability Is the Hardest MDM Discipline</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>Sustainability is the hardest MDM discipline because it requires sustained organizational investment at exactly the moment when the program is least newsworthy. Implementation generates organizational energy — kickoffs, milestones, go-live events. Operations settles into a rhythm that, if well-designed, runs without drama. By year two or three, MDM has become background infrastructure — essential but invisible — and the organizational attention that sustained it through implementation has moved to the next initiative.</p>
+
+              <p>Maintaining the governance commitment, operational investment, and continuous improvement discipline required to keep the program evolving requires deliberate effort to keep MDM visible as a strategic capability rather than allowing it to fade into the category of things that are assumed to be working.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,14 +62,52 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Sustainability requires deliberate investment at exactly the moment when organizational attention is hardest to maintain. Year four is typically the difficulty peak — governance fatigue, capacity strain, regulatory changes requiring adaptation, and original team members who have moved on, all without the organizational energy of a new program launch. Plan for this moment before it arrives, not after the degradation it produces becomes visible.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-sustainability-hardest.png" alt="A difficulty curve across the MDM program lifecycle showing high difficulty and strong executive attention during implementation, moderate difficulty as operational rhythm is established, increasing difficulty from year two as novelty fades and competing priorities emerge, and a year four difficulty peak combining governance fatigue, capacity strain, regulatory adaptation needs, and team turnover — all without the organizational energy of a new program launch." class="course-visual-image">
+                <figcaption>Sustainability requires deliberate investment at exactly the moment when organizational attention is hardest to maintain.</figcaption>
+              </div>
+
+              <!-- Section 2 — The AI Sustainability Connection -->
+              <p class="course-overview-subtitle">The AI Sustainability Connection</p>
+
+              <p>As organizations' AI portfolios grow, the stakes of MDM sustainability increase proportionally. Each new production AI model adds a dependency on governed master data — a dependency that is invisible when the MDM program is performing well and dramatically visible when it isn't.</p>
+
+              <p>Organizations that treat MDM sustainability as a data management concern separate from their AI operations consistently discover the connection when AI model performance degrades due to quality drift that nobody caught because the monitoring and governance practices designed for a smaller AI portfolio were never scaled to match its current size.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>MDM sustainability is AI reliability sustainability. Every AI model that depends on governed data has a stake in MDM sustainability — the AI portfolio grows less reliable as the MDM program ages without evolution. A governance capacity gap that develops as the AI portfolio grows faster than governance scales is not a data management problem — it is an AI program risk that will show up as model performance degradation across every model in the portfolio simultaneously.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-ai-sustainability.png" alt="A dependency diagram showing an AI program portfolio of 14 production models, 6 in development, and 4 planned, each connected to the MDM governance layer. A governance capacity gap develops as the AI portfolio grows faster than governance scales. AI models begin showing performance degradation as the gap widens." class="course-visual-image">
+                <figcaption>Every AI model that depends on governed data has a stake in MDM sustainability — the AI portfolio grows less reliable as the MDM program ages without evolution.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Module 11 covers sustainability as five disciplines that work together to keep the program capable, relevant, and growing as the organization and its AI ambitions evolve around it.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-module-overview.png" alt="A five-stage wheel diagram with Long-Term MDM Capability at the center and five sustainability disciplines arranged around it: Scaling, AI Readiness Evolution, Governance Evolution, Emerging Trends, and Long-Term Operating Model, each labeled with its primary sustainability contribution." class="course-visual-image">
+                <figcaption>Sustainability is not one discipline — it is five, working together to keep the program capable, relevant, and growing.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
 
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
-          <a href="module-10-5-maturity-assessment.html" class="btn btn-primary">Back</a>
+          <a href="module-10-6-recap.html" class="btn btn-primary">Back</a>
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
           <a href="module-11-1-scaling-mdm-programs.html" class="btn btn-accent">Next</a>
         </div>

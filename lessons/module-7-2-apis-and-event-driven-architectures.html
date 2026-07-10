@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: APIs and Event-Driven Architectures - Master Data Management</title>
+  <title>APIs and Event-Driven Architectures - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-2-apis-and-event-driven-architectures.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: APIs and Event-Driven Architectures</h1>
+        <h1 class="header-title">APIs and Event-Driven Architectures</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">APIs and Event-Driven Architectures</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/uyuR0lr6jk7"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to secure MDM APIs for AI consumers, why event ordering matters for AI training data consistency, and when GraphQL offers advantages over REST for complex AI data retrieval.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — API Security for MDM Data -->
+              <p class="course-overview-subtitle">API Security for MDM Data</p>
+
+              <p>MDM APIs expose some of the organization's most sensitive business data — customer records, supplier relationships, financial entity attributes — to a potentially broad set of consuming systems, including AI development environments that may sit outside the organization's core security perimeter. API security for MDM should include strong authentication using enterprise identity standards, role-based authorization that limits each AI consumer to the entity types and operations its use case requires, rate limiting that prevents any consumer from degrading platform performance, and comprehensive audit logging that records every data access event.</p>
+
+              <p>The audit log is particularly important for AI compliance — it provides the evidence that governed data was accessed through a controlled, documented channel rather than extracted informally.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +62,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>When configuring role-based authorization for MDM APIs, define AI consumer roles specifically — not as a subset of existing operational system roles. An AI training pipeline needs read access to governed entity attributes but should never be able to trigger stewardship workflows or modify survivorship configurations. Separate consumer roles prevent AI systems from inadvertently affecting the governance processes that produce the data they consume.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-api-security.png" alt="An API security layer diagram showing four controls: authentication requiring OAuth 2.0 tokens for all requests; authorization using role-based access control mapping AI consumer types to permitted entity types and operations; rate limiting preventing individual consumers from overwhelming the platform; and audit logging recording every API call with consumer identity, entity requested, and response provided." class="course-visual-image">
+                <figcaption>MDM APIs exposing governed data to AI systems require enterprise-grade security controls — not just availability.</figcaption>
+              </div>
+
+              <!-- Section 2 — Event Ordering and Consistency Guarantees -->
+              <p class="course-overview-subtitle">Event Ordering and Consistency Guarantees</p>
+
+              <p>Event-driven architectures introduce ordering and consistency challenges that batch integration does not face. When events arrive out of order — common in distributed systems under load — the MDM platform may process an entity update before the creation event that should logically precede it, producing a temporarily inconsistent golden record. For AI training pipelines subscribing to the governed output stream, these inconsistencies can enter training datasets if the integration architecture does not include sequencing guarantees.</p>
+
+              <p>Organizations should explicitly design for event ordering in their MDM integration architecture — using sequence identifiers, idempotent event processing, and ordered delivery guarantees — rather than assuming that the event stream infrastructure handles ordering automatically.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>AI training data built from out-of-order events inherits the inconsistencies they produce. Do not assume that event streaming infrastructure guarantees ordering by default — most platforms offer ordered delivery as a configuration option, not a default behavior. Failing to configure ordering explicitly is one of the most common sources of subtle, hard-to-diagnose inconsistency in AI training datasets built from event streams.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-event-ordering.png" alt="A scenario showing events arriving out of order — a customer update event arrives before the creation event due to a network delay, causing the MDM platform to produce an inconsistent golden record. Below, a corrected architecture uses a sequencing layer to ensure events are processed in the correct logical order before golden record updates are applied." class="course-visual-image">
+                <figcaption>AI training data built from out-of-order events inherits the inconsistencies they produce.</figcaption>
+              </div>
+
+              <!-- Section 3 — GraphQL as an Alternative to REST for MDM APIs -->
+              <p class="course-overview-subtitle">GraphQL as an Alternative to REST for MDM APIs</p>
+
+              <p>While REST APIs are the most common MDM API pattern, GraphQL is gaining adoption in MDM implementations that serve complex AI use cases requiring data from multiple related entity types in a single request. A supply chain AI model that needs customer, product, and supplier data to generate a prediction would require three separate REST API calls — or one GraphQL query specifying exactly the fields needed from all three entity types.</p>
+
+              <p>For AI inference latency, reducing the number of round trips to the MDM API is significant — and GraphQL's ability to retrieve precisely specified cross-entity data in a single request makes it an increasingly relevant option for AI-driven MDM integration architectures.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>GraphQL reduces the number of API calls AI models need to make to assemble complex entity contexts. This matters most for real-time AI inference use cases where latency is critical — a recommendation engine or fraud detection model that must assemble a customer profile, purchase history, and supplier context before returning a result cannot afford three sequential REST API calls. GraphQL's single-query retrieval of cross-entity data directly addresses this latency constraint.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-graphql-mdm.png" alt="A comparison between a REST API approach and a GraphQL query for the same AI use case — retrieving customer, product purchase history, and supplier fulfillment data for a supply chain model. REST requires three separate API calls to three endpoints with responses assembled by the consumer. GraphQL uses a single query specifying exactly the fields needed from all three entity types and returns all required data in a single response." class="course-visual-image">
+                <figcaption>GraphQL reduces the number of API calls AI models need to make to assemble complex entity contexts.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>APIs and event-driven architecture serve complementary roles — APIs deliver governed data on demand, while event-driven architecture delivers it continuously as the world changes.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-apis-summary.png" alt="A two-panel layout. The left panel shows MDM APIs providing on-demand governed entity access, versioned for model stability, with provenance metadata, AI certification status in responses, and latency SLAs for real-time inference. The right panel shows Event-Driven Architecture providing a continuous governed output stream with near-real-time golden record updates, training data freshness without manual refresh, and a drift detection data feed." class="course-visual-image">
+                <figcaption>Together these technologies give AI systems current, governed, auditable data — at the speed AI applications require.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

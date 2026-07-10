@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 11: Emerging Trends - Master Data Management</title>
+  <title>Emerging Trends - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-11" data-page-id="module-11-4-emerging-trends.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 11: Emerging Trends</h1>
+        <h1 class="header-title">Emerging Trends</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Emerging Trends</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/3qe8ONKQ96z"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to evaluate emerging trends against organizational fit rather than reacting to hype, and why data mesh and MDM are complementary rather than competitive — with MDM shifting from data owner to standards authority in a distributed architecture.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Evaluating Emerging Trends for Organizational Fit -->
+              <p class="course-overview-subtitle">Evaluating Emerging Trends for Organizational Fit</p>
+
+              <p>Emerging trend evaluation requires balancing innovation awareness with organizational reality. A knowledge graph integration might be strategically compelling for an organization with a large generative AI program but premature for one still establishing basic MDM quality practices.</p>
+
+              <p>The evaluation framework assesses each trend against strategic fit, organizational readiness, value potential, and risk — producing a considered adoption recommendation rather than either reflexive enthusiasm or reflexive skepticism. The output of this evaluation should feed directly into the MDM roadmap and governance evolution planning processes, ensuring that trend awareness translates into deliberate roadmap decisions rather than unplanned technology adoptions that bypass the governance framework.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +62,46 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Assess every emerging trend against four dimensions before adding it to the roadmap: strategic fit with the organization's AI and data strategy direction; organizational readiness in terms of governance maturity, technical capability, and cultural readiness; value potential in terms of specific business or AI outcomes adoption would unlock; and risk and cost in terms of implementation complexity and transition requirements. Trend evaluation prevents both premature adoption of unproven practices and late adoption of practices that have become competitive necessities.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
+              <div class="course-visual-block">
+                <img src="../assets/m11-trends-evaluation.png" alt="A trend evaluation framework with four assessment dimensions: Strategic Fit — does this trend align with the organization's AI and data strategy direction; Organizational Readiness — does the organization have the governance maturity, technical capability, and cultural readiness to adopt effectively; Value Potential — what specific business or AI outcomes would adoption unlock; and Risk and Cost — what are the implementation risks, cost implications, and transition complexity." class="course-visual-image">
+                <figcaption>Trend evaluation prevents both premature adoption of unproven practices and late adoption of practices that have become competitive necessities.</figcaption>
+              </div>
+
+              <!-- Section 2 — Data Mesh and MDM — A Deeper Look at the Relationship -->
+              <p class="course-overview-subtitle">Data Mesh and MDM — A Deeper Look at the Relationship</p>
+
+              <p>The relationship between data mesh and MDM is frequently mischaracterized as competitive — the data mesh architectural pattern distributing data ownership away from centralized platforms like MDM. In practice, they are complementary. Data mesh distributes operational data ownership to domain teams but requires a standards layer to make independently owned domain data products interoperable — and MDM provides exactly that standards layer.</p>
+
+              <p>The golden record serves as the authoritative entity reference that all domain data products align to. MDM quality standards serve as the federated governance requirement that makes data products trustworthy enough for AI use cases that span multiple domains. The shift for MDM in a data mesh architecture is from centralized data operation to standards authority — a different and arguably more strategic role that requires less operational footprint but no less governance expertise.</p>
+
+              <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
                   <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Warning
+                  Note
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>In a data mesh architecture, MDM shifts from data owner to standards authority — a smaller footprint with no less governance influence. Three MDM governance touchpoints remain essential: entity reference, requiring each domain data product to use the MDM golden record as its authoritative entity reference; quality standards, requiring each domain data product to meet MDM quality standards for the entity types it includes; and interoperability, requiring domain data products to use the MDM entity identifier as the common key enabling cross-domain joining for AI use cases.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-data-mesh-mdm.png" alt="A data mesh architecture with MDM governance overlaid. Domain data products shown as independently owned and operated with three MDM governance touchpoints: entity reference requiring use of the MDM golden record as authoritative reference; quality standards requiring domain data products to meet MDM quality standards for included entity types; and interoperability requiring use of the MDM entity identifier as the common key for cross-domain data product joining." class="course-visual-image">
+                <figcaption>In a data mesh architecture, MDM shifts from data owner to standards authority — a smaller footprint with no less governance influence.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The organizations that build MDM programs with emerging trends in mind will have more capable AI infrastructure and more resilient governance than those that plan only for today's landscape.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-trends-summary.png" alt="Five emerging trend panels showing strategic implication, organizational readiness requirement, and AI relevance for each: knowledge graphs for entity disambiguation in generative AI; data mesh as a governance standards evolution; AI-native MDM platforms with embedded ML capabilities; real-time master data for AI inference; and regulatory AI governance frameworks requiring MDM audit trail integration." class="course-visual-image">
+                <figcaption>The organizations that build MDM programs with these trends in mind will have more capable AI infrastructure and more resilient governance than those that plan only for today's landscape.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

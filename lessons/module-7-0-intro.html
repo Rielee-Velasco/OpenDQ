@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: Introduction to Module - Master Data Management</title>
+  <title>Integration Approaches - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-0-intro.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: Introduction to Module</h1>
+        <h1 class="header-title">Integration Approaches</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Introduction to Module</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/NM4Fqywexbs"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: An introduction to Module 7 — why integration is the MDM data supply chain, how this module builds on the Module 5 overview with implementation depth, and what the five-stage integration architecture journey covers.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Integration as the MDM Data Supply Chain -->
+              <p class="course-overview-subtitle">Integration as the MDM Data Supply Chain</p>
+
+              <p>Integration is the distribution network of the MDM program. Even the most carefully governed master data has no organizational value if it cannot be reliably delivered to the systems and people who need it. The reliability, currency, and completeness of that delivery — determined by the integration architecture — directly determines the reliability, currency, and completeness of the governed data that AI systems train on, reference at inference time, and monitor for drift.</p>
+
+              <p>Treating integration as a technical plumbing concern separate from MDM strategy consistently produces programs whose governance quality exceeds their integration reach — and whose AI programs therefore operate on data that is less trustworthy than the MDM platform could provide.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,20 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Every supply chain is only as reliable as its distribution network — MDM is no different. A program can achieve excellent matching accuracy, strong survivorship rules, and well-designed governance, and still fail to deliver AI-ready data if the integration architecture is unreliable, slow, or incomplete in its coverage of the systems and pipelines that need governed data.</p>
               </div>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m7-integration-supply-chain.png" alt="A supply chain analogy showing raw materials as source system data flowing through a production process representing MDM governance to finished goods representing governed golden records, delivered to consumers — operational systems and AI pipelines — through a distribution network representing the integration architecture." class="course-visual-image">
+                <figcaption>Every supply chain is only as reliable as its distribution network — MDM is no different.</figcaption>
               </div>
+
+              <!-- Section 2 — How Module 7 Builds on Module 5 -->
+              <p class="course-overview-subtitle">How Module 7 Builds on Module 5</p>
+
+              <p>Module 5 introduced integration as one component of the MDM technology ecosystem — establishing why it matters and what types exist. Module 7 goes significantly deeper, examining the specific architectural patterns that implement each integration type, the tradeoffs that govern synchronization decisions, and the mechanisms that maintain consistency across systems that may be updated at different rates and from different sources.</p>
+
+              <p>Learners who carry the Module 5 overview into Module 7 will find that the depth here resolves many of the "how exactly" questions that the overview intentionally deferred.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,14 +86,28 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Every integration decision has a direct consequence for AI data quality, currency, and completeness. Integration is not a technical afterthought — it is a strategic decision with lasting AI consequences. The architecture chosen today determines how fresh the data is that AI systems operate on, how completely governed records reach every system that needs them, and how quickly quality problems can be detected and resolved across the landscape.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-module5-to-module7.png" alt="A two-panel comparison showing Module 5 on the left introducing integration concepts at a summary level — batch, real-time, API, AI pipeline requirements — and Module 7 on the right exploring the same topics in architectural depth with specific patterns, synchronization tradeoffs, distribution strategies, and consistency mechanisms." class="course-visual-image">
+                <figcaption>Module 7 provides the implementation depth that Module 5's overview established the need for.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Module 7 covers integration as a five-stage architecture journey — from the foundational patterns through to the consistency mechanisms that keep governed data trustworthy everywhere it travels.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-module-overview.png" alt="A five-stage horizontal flow showing the Module 7 integration architecture journey: System Integration Patterns — the architectural blueprints; APIs and Event-Driven Architectures — the technologies; Batch vs. Real-Time — the synchronization choices; Data Distribution — how governed data reaches consumers; Cross-System Consistency — how it stays consistent when it gets there. A banner beneath all five reads: Every integration decision has a direct consequence for AI data quality, currency, and completeness." class="course-visual-image">
+                <figcaption>Integration is not a technical afterthought. It is a strategic decision with lasting AI consequences.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
 
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
-          <a href="module-6-5-governance-operating-models.html" class="btn btn-primary">Back</a>
+          <a href="module-6-6-recap.html" class="btn btn-primary">Back</a>
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
           <a href="module-7-1-system-integration-patterns.html" class="btn btn-accent">Next</a>
         </div>

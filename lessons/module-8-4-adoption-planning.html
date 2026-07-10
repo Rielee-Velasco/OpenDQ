@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 8: Adoption Planning - Master Data Management</title>
+  <title>Adoption Planning - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-8" data-page-id="module-8-4-adoption-planning.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 8: Adoption Planning</h1>
+        <h1 class="header-title">Adoption Planning</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 5 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Adoption Planning</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/Ms0yzRxMYeq"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: Why trust is the real adoption challenge for MDM programs, why AI teams are especially sensitive to access friction, and how to make governed data the default choice for every audience that needs it.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — The Data Trust Problem in Adoption -->
+              <p class="course-overview-subtitle">The Data Trust Problem in Adoption</p>
+
+              <p>The most persistent adoption challenge in MDM programs is not access or process friction — it is trust. Business users who have worked with familiar source system data for years encounter golden records that look different and immediately suspect the MDM platform rather than the source system.</p>
+
+              <p>Building trust in governed data requires transparency — explaining why the golden record differs from what the user expected, documenting the survivorship logic that produced it, and providing a mechanism for users to flag cases where they believe the golden record is wrong. Every case where the MDM platform proves more accurate than the familiar source system is an opportunity to build trust — but only if it is communicated back to the user rather than silently resolved.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +62,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Track and share every instance where the MDM platform caught a data quality issue that the source system missed. These moments are the most powerful trust-building events in the adoption journey — but only if they are visible to the users who would otherwise have relied on the incorrect source data. A silent correction builds no trust; a communicated correction builds lasting credibility for the governed data.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-adoption-trust.png" alt="A trust-building journey for a business user across six months after go-live. Month 1: the user finds a golden record that looks different from the familiar source and is unsure which is correct. Month 2: the steward explains the survivorship logic and the user accepts the governed version. Month 3: the user catches a source system error that MDM already flagged, increasing trust. Month 6: the user now defaults to governed data and questions the source system when they diverge." class="course-visual-image">
+                <figcaption>Trust in governed data is built through transparency, explanation, and demonstrated accuracy over time — not through a one-time go-live announcement.</figcaption>
+              </div>
+
+              <!-- Section 2 — The Self-Service Data Access Imperative for AI Teams -->
+              <p class="course-overview-subtitle">The Self-Service Data Access Imperative for AI Teams</p>
+
+              <p>AI team adoption of MDM governance is more sensitive to access friction than any other audience because AI development cycles are fast and the cost of a two-week governed data access process — relative to a direct CRM extract that takes an hour — is simply too high to sustain adoption. Self-service access through a well-integrated data catalog, with a certification review process measured in hours rather than weeks, is the threshold below which AI team adoption becomes viable at scale.</p>
+
+              <p>Organizations that cannot achieve this threshold consistently find that their AI programs operate on ungoverned data regardless of the quality of the governed data available to them.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>If getting certified governed data is harder than getting ungoverned data, AI teams will get ungoverned data. The governed data access process needs to be faster and simpler than the workaround — not slower and more bureaucratic. If the MDM team requires a ticket and a two-week review while a direct CRM extract takes an hour, the outcome is predictable and the governance investment is wasted.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-adoption-self-service-ai.png" alt="Two AI team experiences side by side. Experience A: governed data requires a ticket, a two-week review, and manual export — the AI team reverts to ungoverned data because the process is too slow. Experience B: governed data is discoverable through the catalog with self-service export available after a certification review completed within 24 hours — the AI team adopts the governed process because it is faster than building their own pipeline." class="course-visual-image">
+                <figcaption>If getting certified governed data is harder than getting ungoverned data, AI teams will get ungoverned data.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Adoption success is not declared at go-live — it is measured monthly and managed actively until governed data becomes the organization's natural default for every audience that needs it.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-adoption-summary.png" alt="A four-audience adoption plan summary showing interventions, friction reduction actions, and success metrics for business domain owners, data stewards, operational users, and AI development teams. Each audience row shows what trust-building looks like for that group and how adoption progress is measured." class="course-visual-image">
+                <figcaption>Adoption success is not declared at go-live. It is measured monthly and managed actively until governed data becomes the organization's natural default.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

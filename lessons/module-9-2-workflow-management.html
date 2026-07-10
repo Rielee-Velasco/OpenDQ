@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 9: Workflow Management - Master Data Management</title>
+  <title>Workflow Management - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-9" data-page-id="module-9-2-workflow-management.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 9: Workflow Management</h1>
+        <h1 class="header-title">Workflow Management</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Workflow Management</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/mEvzzLUj3gO"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: What to automate and what to keep human in MDM governance workflows, and how workflow performance metrics drive the continuous improvement that keeps governance from becoming a bottleneck.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — Workflow Automation in MDM Operations -->
+              <p class="course-overview-subtitle">Workflow Automation in MDM Operations</p>
+
+              <p>Workflow automation in MDM operations should be applied to the administrative and routing components of governance workflows — detection, classification, routing, SLA tracking, escalation triggering, and audit logging — while preserving human judgment for the decisions themselves.</p>
+
+              <p>Organizations that over-automate governance decisions, using ML recommendations as auto-approvals for exception resolution or matching review, consistently produce lower-quality governance outcomes than those that use automation to accelerate the human judgment process rather than replace it. This distinction matters particularly for AI certification workflows, where the domain owner's approval should represent genuine human accountability for the quality of data being certified for AI use — not an automated rubber stamp based on threshold-passing scores.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +62,20 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Automation handles routing and administration. Human judgment handles decisions and rationale. Automate: exception detection and severity classification, routing to responsible steward, SLA countdown and escalation triggers, audit log updates, and certification expiry notifications. Keep human: borderline matching decisions, root cause investigation, resolution rationale documentation, domain owner certification approval, and policy exception decisions.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-workflow-automation.png" alt="A workflow step classification matrix showing exception workflow steps rated for automation suitability. Automated steps include exception detection, routing, SLA tracking, escalation triggering, and audit logging. Steps requiring human judgment include borderline matching decisions, root cause investigation, resolution rationale documentation, domain owner certification approval, and policy exception decisions." class="course-visual-image">
+                <figcaption>Automation handles routing and administration. Human judgment handles decisions and rationale.</figcaption>
+              </div>
+
+              <!-- Section 2 — Workflow Metrics and Continuous Improvement -->
+              <p class="course-overview-subtitle">Workflow Metrics and Continuous Improvement</p>
+
+              <p>Workflow performance metrics serve two purposes — operational accountability and continuous improvement. Accountability metrics show whether SLAs are being met and where the governance process is bottlenecking. Continuous improvement metrics reveal systemic patterns — a high exception reopen rate suggests that resolutions are addressing symptoms rather than root causes; a long AI certification cycle time suggests that the certification process has more friction than the AI teams it serves can absorb.</p>
+
+              <p>Reviewing workflow metrics monthly and using them to drive process improvements is one of the simplest and most effective continuous improvement practices available to an MDM operations team.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +86,22 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Track six workflow metrics monthly: average exception resolution time by severity, SLA breach rate by workflow type, exception reopen rate, matching review queue age, AI certification cycle time, and certification expiry compliance rate. Each metric reveals a different failure mode — together they give the operations team a complete picture of where governance is working smoothly and where it is creating the friction that drives AI teams toward ungoverned workarounds.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                  </svg>
-                  Warning
-                </p>
-                <p>Add a warning placeholder here for common risks.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m9-workflow-metrics.png" alt="A workflow performance dashboard showing six metrics tracked monthly over six months: average exception resolution time by severity level, SLA breach rate by workflow type, exception reopen rate, matching review queue age, AI certification cycle time, and certification expiry compliance rate, each shown as a trend line." class="course-visual-image">
+                <figcaption>Workflow metrics reveal where governance processes are performing well and where they are creating bottlenecks.</figcaption>
               </div>
+
+              <!-- Page Infographic -->
+              <p>Structured workflows are what make MDM governance consistent, measurable, and auditable at operational scale — without them, governance exists only in policy documents rather than in practice.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-workflow-summary.png" alt="Four workflow type cards — exception resolution, matching review, AI certification, and policy change — each showing the workflow steps, SLA requirements, and audit trail specifications that make each workflow type governable and auditable at operational scale." class="course-visual-image">
+                <figcaption>Structured workflows are what make MDM governance consistent, measurable, and auditable at operational scale.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

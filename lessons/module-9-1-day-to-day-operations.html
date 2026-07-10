@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 9: Day-to-Day Operations - Master Data Management</title>
+  <title>Day-to-Day Operations - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-9" data-page-id="module-9-1-day-to-day-operations.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 9: Day-to-Day Operations</h1>
+        <h1 class="header-title">Day-to-Day Operations</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 2 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Day-to-Day Operations</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/3kSpVWh2kMX"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How to design an operational runbook that makes MDM operations independent of any individual's knowledge, and why operational capacity planning must stay ahead of domain expansion to prevent the backlogs that degrade AI readiness.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Designing an Operational Runbook -->
+              <p class="course-overview-subtitle">Designing an Operational Runbook</p>
+
+              <p>An operational runbook is the document that makes MDM operations independent of any specific individual's knowledge. It specifies exactly what is done daily and weekly, who does it, how long it should take, what to do when something unexpected occurs, and who to escalate to at each severity level. Runbooks are particularly valuable during team transitions — when the person who ran operations during implementation hands off to the permanent operational team — because they capture the institutional knowledge that would otherwise exist only in one person's head.</p>
+
+              <p>For AI pipeline operations specifically, the runbook should include response procedures for each type of pipeline SLA breach, specifying when an AI model owner needs to be notified, when a model should be flagged for retraining review, and when a pipeline failure is severe enough to warrant suspending AI inference until the governed data supply is restored.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +62,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Build the runbook during implementation while the knowledge is fresh — not as a handoff artifact created in the final week. Every operational procedure that is executed during the pilot and rollout phases should be documented in real time. A runbook written after implementation from memory is incomplete. A runbook written during implementation from direct operational experience is actionable from day one of steady-state operations.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-operational-runbook.png" alt="A runbook structure showing six sections: daily checklist, weekly checklist, alert response procedures by severity level, escalation paths by issue type, integration failure response procedures, and AI pipeline SLA breach response procedures. Each section shows the responsible role, expected completion time, and escalation trigger." class="course-visual-image">
+                <figcaption>A runbook turns operational knowledge from individual expertise into organizational process.</figcaption>
+              </div>
+
+              <!-- Section 2 — Operational Capacity Planning -->
+              <p class="course-overview-subtitle">Operational Capacity Planning</p>
+
+              <p>Operational capacity planning is one of the most consistently underfunded aspects of MDM programs. Implementation teams focus on building the capability and frequently underestimate the operational headcount required to sustain it. When operational capacity is insufficient for the exception volume the program generates, backlogs accumulate, resolution times extend, and AI certification statuses fall behind — directly affecting the AI teams whose models depend on current certifications.</p>
+
+              <p>Planning operational capacity explicitly for each implementation phase, and securing that capacity before the phase begins rather than after the backlog has already formed, is the discipline that prevents the capacity crises that derail otherwise well-built MDM programs.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +86,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Operational capacity must be planned ahead of domain expansion — capacity gaps cause the backlogs that degrade AI readiness. A program expanding from one domain to three will see exception volume roughly triple. If steward capacity doesn't expand proportionally before the new domains go live, the backlog forms immediately and AI certification statuses begin to lag within weeks. Secure the capacity before the expansion, not after the backlog is already visible.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-ops-capacity.png" alt="A capacity model showing how operational workload grows as the program expands across three phases. Phase 1: one domain, one AI pipeline, estimated 40 daily exceptions, 0.5 FTE steward capacity required. Phase 2: three domains, three AI pipelines, estimated 180 daily exceptions, 1.5 FTE required. Phase 3: six domains, eight AI pipelines, estimated 420 daily exceptions, 3 FTE plus one operations analyst required." class="course-visual-image">
+                <figcaption>Operational capacity must be planned ahead of domain expansion — capacity gaps cause the backlogs that degrade AI readiness.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Daily and weekly operations together form the operational rhythm that keeps MDM governance real and AI systems reliable — cadence is what turns governance design into governance practice.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-day-to-day-summary.png" alt="A two-row calendar grid showing daily activities on the top row and weekly activities on the bottom row, with responsible role icons and AI pipeline relevance callouts for each activity, illustrating how the operational rhythm connects routine governance work to AI system reliability." class="course-visual-image">
+                <figcaption>Daily and weekly operations together form the operational rhythm that keeps MDM governance real and AI systems reliable.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

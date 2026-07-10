@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 10: Data Quality Scorecards - Master Data Management</title>
+  <title>Data Quality Scorecards - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-10" data-page-id="module-10-3-data-quality-scorecards.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 10: Data Quality Scorecards</h1>
+        <h1 class="header-title">Data Quality Scorecards</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Data Quality Scorecards</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/dfBwJA0ALkw"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: The five design principles that make scorecards actually get read and acted on, and why retaining scorecards as time-stamped governance records creates the audit trail that AI regulatory inquiries require.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,21 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Scorecard Design Principles -->
+              <p class="course-overview-subtitle">Scorecard Design Principles</p>
+
+              <p>Scorecard design is a communication discipline as much as a measurement discipline. A scorecard that is too detailed to read quickly defeats its own purpose — the domain owner who receives a 12-page quality report will read the summary and ignore the detail, which means the detail serves no governance purpose. A scorecard that fits on one structured page, leads with the most decision-relevant information, uses color coding to communicate status at a glance, and ends with explicit required actions will be read, acted on, and valued by its recipients.</p>
+
+              <p>Placing AI certification status prominently — rather than at the bottom as an add-on to traditional quality metrics — signals to domain owners that AI governance is a primary purpose of the scorecard, not a supplementary reporting obligation.</p>
+
+              <ul class="course-list">
+                <li>One page — a scorecard that requires scrolling loses its audience before they reach the actions required section</li>
+                <li>Traffic lights over numbers alone — color-coded indicators communicate status faster than numbers alone</li>
+                <li>Trend over point-in-time — a score is informative, a trend is actionable</li>
+                <li>Actions explicit — every scorecard should end with a clear section stating what the recipient needs to decide or do</li>
+                <li>AI-first ordering — AI certification status should appear high on the scorecard, not as an afterthought after operational metrics</li>
+              </ul>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,8 +70,20 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Test every scorecard design against this standard: can a domain owner read it in under two minutes and know exactly what governance decision or action is required of them? If not, it needs to be simplified. The most common scorecard failures are too many metrics without prioritization, no explicit actions section, and AI certification status buried below operational detail that domain owners stopped reading before they reached it.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m10-scorecard-design.png" alt="Five scorecard design principles shown as cards: one page for scanability; traffic lights over numbers alone for faster status communication; trend over point-in-time for actionability; actions explicit at the end of every scorecard; and AI-first ordering with certification status appearing prominently rather than as an afterthought." class="course-visual-image">
+                <figcaption>A well-designed scorecard is read in under two minutes and produces a clear governance decision or action.</figcaption>
+              </div>
+
+              <!-- Section 2 — Scorecards and Regulatory Audit Readiness -->
+              <p class="course-overview-subtitle">Scorecards and Regulatory Audit Readiness</p>
+
+              <p>Data quality scorecards are increasingly serving a secondary purpose as regulatory audit evidence — particularly for organizations operating AI systems in regulated industries where demonstrating data governance quality is a compliance requirement. Retaining scorecards as time-stamped governance records, linked to the AI certification records they informed, creates an audit trail that documents the quality of training data at the time of AI model certification.</p>
+
+              <p>Organizations that generate scorecards but don't retain them as governance records lose this audit trail — and face the significantly harder challenge of reconstructing training data quality evidence after the fact when a regulatory inquiry or legal challenge requires it.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +94,22 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Scorecards retained as governance records provide audit evidence for AI regulatory inquiries. A scorecard that is generated, reviewed, and discarded has no audit value. Define a retention policy for scorecards from the start — linked to the AI certification records they informed and the model versions they supported — before a regulatory inquiry or legal challenge requires you to produce evidence that no longer exists.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m10-scorecard-audit.png" alt="An audit scenario where a regulator requests evidence that a credit scoring AI model was trained on data meeting defined quality standards. The evidence provided is the domain scorecard at time of model training showing quality scores, AI certification status, certified feature list, and domain owner approval, plus the AI certification record linked in the model registry. The auditor assessment confirms sufficient evidence of data governance at time of training." class="course-visual-image">
+                <figcaption>Scorecards retained as governance records provide audit evidence for AI regulatory inquiries.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Scorecards make quality measurement a governance tool — structured, consistent, actionable, and AI-accountability-ready at every level of the organization.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m10-scorecard-summary.png" alt="A three-level scorecard hierarchy showing domain, program, and executive views with the information flow between them. The AI certification section is highlighted at each level, showing how certification status flows from the domain scorecard into the program view and executive summary." class="course-visual-image">
+                <figcaption>Scorecards make quality measurement a governance tool — structured, consistent, actionable, and AI-accountability-ready.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

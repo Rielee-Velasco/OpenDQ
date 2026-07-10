@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: Batch vs Real-Time Synchronization - Master Data Management</title>
+  <title>Batch vs Real-Time Synchronization - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-3-batch-vs-real-time-synchronization.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: Batch vs Real-Time Synchronization</h1>
+        <h1 class="header-title">Batch vs Real-Time Synchronization</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Batch vs Real-Time Synchronization</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/NEtPj0Kcexh"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How change data capture bridges batch and real-time synchronization, why synchronization SLAs should be governance artifacts rather than operational assumptions, and how to match synchronization frequency to AI use case requirements.</figcaption>
             </figure>
           </div>
 
@@ -46,19 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — Change Data Capture as a Bridge Between Batch and Real-Time -->
+              <p class="course-overview-subtitle">Change Data Capture as a Bridge Between Batch and Real-Time</p>
+
+              <p>Change data capture is a technology pattern that sits at the boundary between batch and real-time synchronization and is often the practical pathway for organizations transitioning from batch-only MDM integration toward real-time capability. Rather than extracting and loading full datasets on a schedule, CDC monitors database transaction logs to capture only the records that have actually changed since the last capture cycle.</p>
+
+              <p>These changes can be published at any frequency from near-real-time to scheduled micro-batch, giving organizations flexible control over synchronization latency without the full infrastructure complexity of native event streaming. For MDM programs beginning to support real-time AI inference use cases, CDC-based integration often provides a pragmatic first step toward lower latency without requiring a complete integration re-architecture.</p>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,20 +62,46 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>If your organization is running batch-only MDM integration but has AI inference use cases that need fresher data, CDC is the right starting point — not a full event streaming re-architecture. CDC delivers delta-based synchronization at configurable latency, requires less operational complexity than native event streaming, and can be implemented incrementally connection by connection rather than requiring a wholesale infrastructure change.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
+              <div class="course-visual-block">
+                <img src="../assets/m7-cdc.png" alt="A CDC architecture diagram showing a database transaction log on the left monitored by a CDC agent that captures only changed records since the last cycle. Changed records are published to an integration layer at configurable frequency from near-real-time streaming to scheduled micro-batch. The MDM platform receives and processes only the delta rather than a full dataset extract." class="course-visual-image">
+                <figcaption>CDC enables efficient batch-to-real-time migration by capturing only changes rather than full dataset extracts.</figcaption>
+              </div>
+
+              <!-- Section 2 — Synchronization SLAs and AI Program Governance -->
+              <p class="course-overview-subtitle">Synchronization SLAs and AI Program Governance</p>
+
+              <p>Synchronization SLAs transform implicit assumptions about data currency into explicit, monitored governance commitments. Without defined SLAs, AI program teams assume their data will be current without any mechanism for detecting or responding when it isn't. With SLAs, each integration connection has a defined performance standard, a monitoring mechanism that detects breaches, and a defined response procedure — including notifications to AI model owners when synchronization failures could affect model quality or inference accuracy.</p>
+
+              <p>Establishing synchronization SLAs as part of the MDM governance framework, rather than as an operational infrastructure concern, ensures that data currency commitments to AI programs are treated with the same rigor as data quality commitments.</p>
+
+              <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
                   <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
                   </svg>
-                  Warning
+                  Note
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>SLAs make synchronization performance a governed, monitored commitment rather than a background assumption. Every integration connection serving an AI use case should have a defined SLA — including what the latency target is, what constitutes a breach, who is notified when a breach occurs, and what the automatic fallback behavior is. A fraud detection AI that goes 20 minutes without a golden record update due to an unmonitored integration failure is an unacceptable risk that a synchronization SLA would have surfaced immediately.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-sync-slas.png" alt="A synchronization SLA registry showing four integration connections: CRM to MDM platform with a nightly batch SLA; MDM to fraud detection AI with a 3-second real-time delivery SLA; MDM to training pipeline with a nightly refresh SLA; and customer order system to MDM with a 10-second event processing SLA. Each connection shows its breach consequence and response procedure." class="course-visual-image">
+                <figcaption>SLAs make synchronization performance a governed, monitored commitment rather than a background assumption.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>The right synchronization frequency is determined by AI use case requirements — never by what is technically easiest or what the existing integration infrastructure already does.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-sync-summary.png" alt="A spectrum diagram from batch to real-time synchronization with AI use cases mapped at appropriate points along the spectrum. Three rows beneath show cost, complexity, and governance requirements all increasing from left to right. A decision guide panel on the right helps organizations match synchronization frequency to specific AI use case latency requirements." class="course-visual-image">
+                <figcaption>Match synchronization frequency to AI use case requirements — never over-engineer, never under-engineer.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

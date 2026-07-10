@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 11: AI Readiness and Trusted Data - Master Data Management</title>
+  <title>AI Readiness and Trusted Data - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-11" data-page-id="module-11-2-ai-readiness-and-trusted-data.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 11: AI Readiness and Trusted Data</h1>
+        <h1 class="header-title">AI Readiness and Trusted Data</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 3 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">AI Readiness and Trusted Data</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/S4bqWzk8rGh"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: Why AI readiness is a continuously moving target that requires MDM to evolve alongside the AI program, how generative AI is raising the floor on data governance requirements, and what an AI-mature MDM program looks like in practice.</figcaption>
             </figure>
           </div>
 
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — AI Readiness as a Moving Target -->
+              <p class="course-overview-subtitle">AI Readiness as a Moving Target</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>AI readiness is not a state that an MDM program achieves and maintains — it is a moving target that advances as the organization's AI ambitions grow. A program that achieves AI readiness for a portfolio of predictive models may find that it is not ready for the data governance requirements of large language model grounding, real-time AI inference at scale, or multi-agent AI systems that draw on multiple entity types simultaneously.</p>
+
+              <p>MDM programs that treat AI readiness as a one-time certification milestone rather than a continuously evolving standard consistently find themselves behind their organization's AI program — delivering governance that was designed for the AI capabilities of two years ago rather than the AI capabilities being deployed today.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +62,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>AI readiness achieved for last year's AI program is not AI readiness for this year's. The data governance requirements for predictive analytics, large language model grounding, real-time inference, and multi-agent systems are meaningfully different from each other. An MDM program that doesn't review its AI readiness standards against the organization's current and planned AI capabilities at least annually will progressively fall behind the AI program it is meant to support.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-ai-readiness-moving-target.png" alt="A timeline showing AI readiness standards evolving across four generations of AI capability: predictive analytics requiring basic data quality and completeness; machine learning at scale requiring golden record consistency and feature store integration; generative AI requiring entity disambiguation, provenance metadata, and hallucination reduction through governed context; and multi-agent systems requiring cross-domain entity resolution and real-time governance event streams." class="course-visual-image">
+                <figcaption>AI readiness is not a milestone — it is a continuously evolving standard that advances with the organization's AI capabilities.</figcaption>
+              </div>
+
+              <!-- Section 2 — Generative AI and the Trusted Data Imperative -->
+              <p class="course-overview-subtitle">Generative AI and the Trusted Data Imperative</p>
+
+              <p>Generative AI has raised the floor on data governance requirements in ways that have surprised many organizations. For predictive AI, poor data quality produces inaccurate predictions that can often be detected through performance monitoring. For generative AI, poor data quality produces confidently stated incorrect information — hallucinations grounded in bad entity data that the model presents as factual without qualification.</p>
+
+              <p>MDM's role in generative AI readiness is specifically to provide the entity resolution, disambiguation, and provenance metadata that allows grounding systems to give language models accurate, trustworthy context about real-world entities. Organizations that have invested in strong MDM governance find that their generative AI programs can be grounded in trusted entity data, significantly reducing hallucination rates and improving response reliability.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Generative AI grounded in governed MDM data is more reliable than generative AI grounded in raw source system data — because MDM provides resolved, disambiguated entity context that raw data cannot. When a customer service AI assistant needs to answer a question about a specific customer's account, the quality of that answer depends directly on the quality of the entity resolution that connects all of that customer's records to a single, accurate golden record.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-genai-trusted-data.png" alt="A comparison showing a generative AI customer service assistant grounded in ungoverned raw source data producing a hallucinated response about a customer with fragmented records, versus the same assistant grounded in an MDM-governed golden record producing an accurate, entity-resolved response. The MDM-grounded version shows lower hallucination rate, higher response accuracy, and auditable provenance metadata." class="course-visual-image">
+                <figcaption>Generative AI grounded in governed MDM data produces more reliable outputs than generative AI grounded in raw source system data.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>An AI-mature MDM program is one that continuously evolves its readiness standards alongside the AI capabilities it supports — anticipating the next generation of AI requirements before they arrive.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m11-ai-readiness-summary.png" alt="A maturity-to-AI-capability alignment diagram showing four MDM AI readiness levels mapped against four generations of AI capability: Level 1 supporting predictive analytics; Level 2 supporting ML at scale with feature store integration; Level 3 supporting generative AI with provenance metadata and disambiguation; Level 4 supporting multi-agent systems with real-time governance event streams and cross-domain entity resolution." class="course-visual-image">
+                <figcaption>AI readiness maturity should stay one level ahead of the organization's current AI deployment — anticipating requirements before they block AI program progress.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 8: Migration Considerations - Master Data Management</title>
+  <title>Migration Considerations - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-8" data-page-id="module-8-3-migration-considerations.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 8: Migration Considerations</h1>
+        <h1 class="header-title">Migration Considerations</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 4 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Migration Considerations</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/piQhR9JzIWr"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: Where migration costs actually come from, why historical entity resolution is more complex than current-record resolution, and how to treat migration as a first-class AI readiness workstream rather than a technical loading exercise.</figcaption>
             </figure>
           </div>
 
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — The Hidden Cost of Poor Migration Planning -->
+              <p class="course-overview-subtitle">The Hidden Cost of Poor Migration Planning</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>The most common source of MDM migration budget overruns is remediating data quality problems that were not fully surfaced in pre-migration profiling. Profiling typically samples a subset of records — often the most structured and well-maintained subset, which understates the quality problems of the full population. When migration encounters the tail of the quality distribution — the oldest records, the records from the least-maintained source systems, the records created before any quality standards were in place — the remediation effort expands significantly beyond the planned estimate.</p>
+
+              <p>Organizations that conduct exhaustive pre-migration profiling across the full record population, including the oldest and least-accessed records, produce significantly more accurate migration cost estimates and avoid the budget crises that derail implementation timelines.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,8 +62,46 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>Remediation is the largest migration cost component — and the one most frequently underestimated in initial planning. In a typical Phase 1 migration, remediation of pre-migration quality issues accounts for approximately 35% of total migration cost, more than ETL development, entity resolution, and cutover combined. Accurate migration cost estimation requires an honest, exhaustive data quality assessment before planning begins — not a sample-based profile of the best-maintained records.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-migration-cost.png" alt="A cost breakdown for a typical Phase 1 migration showing six components: data profiling and assessment at 15%, remediation of pre-migration quality issues at 35%, ETL development at 20%, entity resolution and golden record creation at 15%, historical data preparation for AI training at 10%, and cutover planning and execution at 5%. A callout highlights that remediation is the largest and most frequently underestimated component." class="course-visual-image">
+                <figcaption>Accurate migration cost estimation requires an honest data quality assessment before planning begins.</figcaption>
+              </div>
+
+              <!-- Section 2 — Entity Resolution for Migrated Historical Data -->
+              <p class="course-overview-subtitle">Entity Resolution for Migrated Historical Data</p>
+
+              <p>Resolving entities across historical migration periods is significantly more complex than resolving current records because entities change over time — customers move, change names, change email addresses, and change employment status. Standard entity resolution configurations optimized for current records frequently mishandle historical records where the identifying attributes no longer match the current golden record.</p>
+
+              <p>Organizations migrating historical data for AI training purposes need to invest specifically in historical entity resolution — extending matching rules to account for temporal variations in identifying attributes, and validating resolution accuracy against known historical entity relationships rather than assuming that current-record matching configurations will generalize to historical data.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Historical entity resolution is more complex than current-record resolution — plan for it explicitly. A churn prediction model trained on fragmented historical records that were not correctly linked to their golden entity will learn the wrong lifetime value patterns, producing systematically biased predictions. Historical entity resolution is not a data housekeeping task — it is a prerequisite for AI training data that correctly represents customer history.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-migration-entity-resolution.png" alt="A historical entity resolution challenge diagram showing a customer entity with records spanning twelve years across three legacy systems. The customer's name, email, and address changed multiple times over that period due to life events and system migrations. Entity resolution must correctly link all records to the same golden entity despite these variations. An AI implication callout notes that a churn prediction model trained on fragmented historical records learns the wrong lifetime value patterns." class="course-visual-image">
+                <figcaption>Historical entity resolution is more complex than current-record resolution — plan for it explicitly.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Migration is the transformation that makes AI training on governed data possible — treating it as a first-class implementation workstream rather than a background loading exercise determines whether the data that emerges is AI-ready or merely present.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m8-migration-summary.png" alt="A four-stage migration pipeline showing Inventory, Assess and Cleanse, Migrate and Resolve, and Certify and Connect. Each stage lists key activities and includes an AI readiness checkpoint, showing how migration progress connects directly to AI training data readiness at each step." class="course-visual-image">
+                <figcaption>Migration is the transformation that makes AI training on governed data possible — treat it as a first-class implementation workstream.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>

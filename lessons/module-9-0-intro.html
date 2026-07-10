@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 9: Introduction to Module - Master Data Management</title>
+  <title>Operating and Managing MDM - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-9" data-page-id="module-9-0-intro.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 9: Introduction to Module</h1>
+        <h1 class="header-title">Operating and Managing MDM</h1>
         <div class="header-actions">
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
         </div>
@@ -21,18 +21,17 @@
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Introduction to Module</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/kaNwgugOyB7"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: An introduction to Module 9 — why the shift from implementation to operations is a vulnerable moment that requires deliberate planning, why AI reliability is the most compelling framing for MDM operational excellence, and what the five operational disciplines cover.</figcaption>
             </figure>
           </div>
 
@@ -46,31 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
 
-              <div class="course-callout course-callout-note">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
-                  Note
-                </p>
-                <p>Add a note placeholder here for supporting context.</p>
-              </div>
+              <!-- Section 1 — The Shift From Implementation to Operations -->
+              <p class="course-overview-subtitle">The Shift From Implementation to Operations</p>
 
-              <div class="course-callout course-callout-tip">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M9 18h6"></path>
-                    <path d="M10 22h4"></path>
-                    <path d="M12 2a7 7 0 0 0-4 12.75c.64.47 1 1.21 1 2V17h6v-.25c0-.79.36-1.53 1-2A7 7 0 0 0 12 2z"></path>
-                  </svg>
-                  Tip
-                </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
-              </div>
+              <p>The transition from implementation to operations is one of the most vulnerable moments in an MDM program's lifecycle. Implementation teams are skilled at building — configuring platforms, migrating data, establishing governance structures, connecting AI pipelines. Operational teams need a different skill set — managing exception queues, sustaining governance cadences, responding to monitoring alerts, and continuously improving quality.</p>
+
+              <p>Organizations that plan this transition deliberately — defining when it happens, who is responsible, what the operational team needs to know, and how performance will be measured — navigate it successfully. Those that treat it as an automatic handoff consistently see quality and AI readiness degrade in the months following implementation completion.</p>
 
               <div class="course-callout course-callout-warning">
                 <p class="course-callout-title">
@@ -81,14 +62,52 @@
                   </svg>
                   Warning
                 </p>
-                <p>Add a warning placeholder here for common risks.</p>
+                <p>The transition from implementation to operations requires a deliberate handoff — not an assumption that the same team continues doing the same work. Implementation is project-based with a defined end date and success measured by delivery milestones. Operations is ongoing with no defined end and success measured by continuous performance against quality and AI readiness thresholds. Treating them as the same discipline with the same team produces neither well.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-impl-to-ops.png" alt="A two-column comparison between Implementation and Operations. Implementation: project-based, defined start and end, implementation team leads, success measured by delivery milestones. Operations: ongoing with no defined end, permanent team owns it, success measured by continuous performance against quality and AI readiness thresholds." class="course-visual-image">
+                <figcaption>The transition from implementation to operations requires a deliberate handoff — not an assumption that the same team continues doing the same work.</figcaption>
+              </div>
+
+              <!-- Section 2 — AI Reliability as the Operational North Star -->
+              <p class="course-overview-subtitle">AI Reliability as the Operational North Star</p>
+
+              <p>AI reliability is the most compelling organizational framing for MDM operational excellence — more compelling than data quality scores, more compelling than governance compliance rates, and more compelling than exception resolution times. When operational disciplines are framed as the practices that keep AI systems trustworthy, they attract the executive attention, the business owner engagement, and the organizational priority that purely technical quality metrics rarely sustain.</p>
+
+              <p>Organizations that position their MDM operations program as AI reliability infrastructure consistently report stronger stakeholder support and more sustained operational investment than those that position it as a data management maintenance function.</p>
+
+              <div class="course-callout course-callout-note">
+                <p class="course-callout-title">
+                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg>
+                  Note
+                </p>
+                <p>Every operational MDM discipline either supports or undermines the reliability of AI systems that depend on governed data. Day-to-day operations maintain the golden records AI models reference. Workflow management resolves the exceptions that would otherwise degrade those records. Monitoring detects the quality drift that erodes AI model performance. Continuous improvement raises the quality floor that AI systems depend on. Governance execution ensures accountability for all of the above.</p>
+              </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-ai-reliability-north-star.png" alt="A North Star diagram with AI Reliability at the center and five operational disciplines arranged around it — day-to-day operations, workflow management, monitoring, continuous improvement, and governance execution — each with an arrow pointing inward showing its contribution to AI reliability." class="course-visual-image">
+                <figcaption>Every operational MDM discipline either supports or undermines the reliability of AI systems that depend on governed data.</figcaption>
+              </div>
+
+              <!-- Page Infographic -->
+              <p>Module 9 covers the five operational disciplines that keep MDM performing as permanent infrastructure — for the business and for every AI system that depends on it.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m9-module-overview.png" alt="A five-stage flow showing the Module 9 operational landscape: Day-to-Day Operations — the recurring activities; Workflow Management — the processes that handle exceptions and decisions; Monitoring and Issue Resolution — the practices that detect and fix problems; Continuous Improvement — the discipline that makes the program better over time; Governance Execution — how governance frameworks run in practice. A banner beneath reads: Every operational discipline has a direct consequence for AI system reliability." class="course-visual-image">
+                <figcaption>Operational MDM is permanent infrastructure — for the business and for every AI system that depends on it.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
 
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
-          <a href="module-8-5-change-management.html" class="btn btn-primary">Back</a>
+          <a href="module-8-6-recap.html" class="btn btn-primary">Back</a>
           <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 1 of 6</span>
           <a href="module-9-1-day-to-day-operations.html" class="btn btn-accent">Next</a>
         </div>

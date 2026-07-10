@@ -3,36 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Module 7: Cross-System Consistency - Master Data Management</title>
+  <title>Cross-System Consistency - Master Data Management</title>
   <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body data-module-id="module-7" data-page-id="module-7-5-cross-system-consistency.html">
   <div class="layout">
-            <div id="sidebar-container"></div>
+    <div id="sidebar-container"></div>
 
     <div class="main-content">
       <header class="header">
-        <h1 class="header-title">Module 7: Cross-System Consistency</h1>
+        <h1 class="header-title">Cross-System Consistency</h1>
         <div class="header-actions">
-          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 6</span>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 7</span>
         </div>
       </header>
 
       <div class="content">
         <div class="module-content">
           <div class="card introduction-card">
-            <h2 class="introduction-title">Cross-System Consistency</h2>
             <figure class="introduction-figure">
               <div class="introduction-video-frame">
                 <iframe
                   class="introduction-video"
-                  src="about:blank"
+                  src="https://share.descript.com/embed/N9AdVzjdkgL"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
                 </iframe>
               </div>
-              <figcaption class="introduction-caption">Video placeholder</figcaption>
+              <figcaption class="introduction-caption">Watch: How the CAP theorem shapes MDM consistency tradeoffs, which reconciliation patterns fit different consumer types, and why cross-system consistency is an ongoing operational practice rather than a one-time architectural decision.</figcaption>
             </figure>
           </div>
 
@@ -46,7 +45,13 @@
             </h2>
 
             <div class="course-overview-body">
-              <p>Use this short overview paragraph placeholder to summarize the page in one or two sentences.</p>
+
+              <!-- Section 1 — The CAP Theorem and MDM Consistency Tradeoffs -->
+              <p class="course-overview-subtitle">The CAP Theorem and MDM Consistency Tradeoffs</p>
+
+              <p>The CAP theorem — the well-established distributed systems principle that no distributed system can simultaneously guarantee strong consistency, full availability, and partition tolerance — has direct implications for MDM integration architecture. MDM programs must make explicit tradeoffs between these properties based on their operational requirements and AI use case profiles.</p>
+
+              <p>Systems that prioritize availability and partition tolerance — the practical choice for most enterprise MDM integration environments — accept eventual consistency as the achievable standard. Understanding this constraint prevents architects from designing integration systems that implicitly assume strong consistency and then fail to deliver it in production, producing the kind of intermittent AI data quality failures that are notoriously difficult to diagnose.</p>
 
               <div class="course-callout course-callout-note">
                 <p class="course-callout-title">
@@ -57,8 +62,24 @@
                   </svg>
                   Note
                 </p>
-                <p>Add a note placeholder here for supporting context.</p>
+                <p>Understanding the CAP theorem helps MDM architects make principled consistency tradeoffs rather than optimistic assumptions. Most enterprise MDM environments land in the availability and partition tolerance zone, which means eventual consistency is the design target — not strong consistency. AI use cases that require strong consistency need specific architectural accommodations, such as read-your-writes guarantees or synchronous replication, that come at a real performance and complexity cost.</p>
               </div>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-cap-theorem.png" alt="A triangle diagram with Consistency, Availability, and Partition Tolerance at each vertex. The CAP theorem is shown as the constraint that a distributed system can strongly guarantee only two of the three simultaneously. MDM integration is plotted prioritizing availability and partition tolerance and accepting eventual consistency. AI use case annotations show where different AI applications sit on the consistency spectrum." class="course-visual-image">
+                <figcaption>Understanding the CAP theorem helps MDM architects make principled consistency tradeoffs rather than optimistic assumptions.</figcaption>
+              </div>
+
+              <!-- Section 2 — Reconciliation Patterns for MDM Consumer Systems -->
+              <p class="course-overview-subtitle">Reconciliation Patterns for MDM Consumer Systems</p>
+
+              <p>Reconciliation — the process of identifying and resolving divergences between consumer system data and the current MDM golden record — is the operational backstop that prevents temporary consistency failures from becoming permanent. The right reconciliation pattern depends on the consistency SLA and operational profile of each consumer.</p>
+
+              <ul class="course-list">
+                <li>Scheduled Full Reconciliation — periodic full comparison against golden records; high accuracy, high resource cost; appropriate for batch-oriented consumers with low-frequency data access</li>
+                <li>Delta Reconciliation — comparison of only records changed since the last cycle using golden record version numbers; more efficient; appropriate for most operational consumers</li>
+                <li>Event-Triggered Reconciliation — consumer subscribes to golden record change events and self-reconciles when a significant version gap is detected; most efficient; appropriate for AI inference services with strong consistency requirements</li>
+              </ul>
 
               <div class="course-callout course-callout-tip">
                 <p class="course-callout-title">
@@ -69,28 +90,30 @@
                   </svg>
                   Tip
                 </p>
-                <p>Add a tip placeholder here for practical guidance.</p>
+                <p>Match the reconciliation pattern to the consistency SLA and operational profile of each consumer — not to what is easiest to implement uniformly. AI inference services should use event-triggered reconciliation because their consistency requirements are tightest and their self-reconciliation can be automated. Applying scheduled full reconciliation to an AI inference service because it is familiar from batch integration will produce consistency windows that the inference use case cannot tolerate.</p>
               </div>
 
-              <div class="course-callout course-callout-warning">
-                <p class="course-callout-title">
-                  <svg class="course-inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                    <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                    <line x1="12" y1="9" x2="12" y2="13"></line>
-                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                  </svg>
-                  Warning
-                </p>
-                <p>Add a warning placeholder here for common risks.</p>
+              <div class="course-visual-block">
+                <img src="../assets/m7-reconciliation-patterns.png" alt="Three reconciliation pattern cards: Scheduled Full Reconciliation with periodic full comparison, high accuracy and resource cost, suited to batch consumers; Delta Reconciliation using golden record version numbers to compare only changed records, suited to most operational consumers; and Event-Triggered Reconciliation where consumers self-reconcile on detecting a version gap, suited to AI inference services with strong consistency requirements." class="course-visual-image">
+                <figcaption>Reconciliation pattern should match the consistency SLA and operational profile of each consumer system.</figcaption>
               </div>
+
+              <!-- Page Infographic -->
+              <p>Consistency is not a project deliverable — it is an ongoing operational practice sustained through a continuous cycle of versioning, distribution, monitoring, and reconciliation.</p>
+
+              <div class="course-visual-block">
+                <img src="../assets/m7-consistency-summary.png" alt="A four-component cycle diagram showing Version, Distribute, Monitor, and Reconcile cycling back to Version. Each component is labeled with its AI relevance. The center reads: Consistent Governed Data Across All Consumers." class="course-visual-image">
+                <figcaption>Consistency is not a project deliverable. It is an ongoing operational practice that determines whether AI systems can be trusted at every moment.</figcaption>
+              </div>
+
             </div>
           </section>
         </div>
 
         <div style="margin-top: 48px; display: flex; justify-content: space-between; align-items: center;">
           <a href="module-7-4-data-distribution-approaches.html" class="btn btn-primary">Back</a>
-          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 6</span>
-          <a href="module-8-0-intro.html" class="btn btn-accent">Next</a>
+          <span style="color: var(--text-light); font-size: var(--font-size-sm);">Page 6 of 7</span>
+          <a href="module-7-6-recap.html" class="btn btn-accent">Next</a>
         </div>
       </div>
     </div>
